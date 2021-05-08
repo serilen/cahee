@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button {
-	padding: 14px 20px;
+	display: block;
 	border: 2px solid transparent;
 }
 
@@ -140,6 +140,7 @@ h1, h2, h3, h4, h5, h6, p {
 	text-transform: uppercase;
 	font-size: 20px;
 	color: #fff;
+	padding: 14px 20px;
 }
 
 .header__button:focus {
@@ -177,9 +178,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .about {
-	background: #00b0b0 50% no-repeat;
-	background-size: cover;
-	padding: 77px 0;
+	background-color: #00b0b0;
+	padding: 70px 0;
 }
 
 .about__row {
@@ -188,25 +188,24 @@ h1, h2, h3, h4, h5, h6, p {
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   margin: 0 auto;
-
-}
-
-.about__content {
-   flex-grow: 1;
-   flex-shrink: 1;
-   flex-basis: auto;
-   color: #fff;
 }
 
 .about__img {
-	flex: 0 0 650px;
+	flex: 0 1 600px;
+	margin-left: -40px;
 }
 
 .img-responsive {
 	max-width: 100%;
 	height: auto;
 	display: block;
+}
+
+.about__content {
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+   color: #fff;
 }
 
 .about__title {
@@ -224,38 +223,43 @@ h1, h2, h3, h4, h5, h6, p {
 
 .service {
 	background-color: #70bfff;
-	padding: 180px 0 150px;
+	padding: 180px 0 150px 100px;
 }
 
-.container-service {
+.service-row {
 	display: flex;
-	position: relative;
 	flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   margin: 0 -15px;
+   background-image: url(../img/img-service.png);
+   background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
 }
 
 .service__item {
-	padding: 0 15px;
-   flex-grow: 0;
-   flex-shrink: 0;
-   flex-basis: 560px;
-   margin-right: 80px;
+	flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: 400px;
+   margin-left: 100px;
+   margin-right: 90px;
+   display: flex;
+   flex-direction: column;
 }
 
 .service-card__button {
+	flex: 1 1 auto;
+   padding: 25px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 91%;
 	background-color: #fff;
-	padding: 30px;
 	margin-bottom: 20px;
 	font-size: 20px;
 	font-weight: 700;
 	text-align: left;
+	height: 100px;
 }
 
 .service-card__text-button {
@@ -271,17 +275,123 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .service__title {
+	padding: 0 15px;
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
 	font-size: 90px;
-	color: #fff;
-	z-index: 2;
-	position: absolute;
-	left: 53%;
-	bottom: 45%;
+	color: #fff;	
 }
 
-.service__img {
-	position: absolute;
-	right: 1%;
-	z-index: 1;
-	bottom: 4%;
+.gallery {
+	background-color: #ffe92f;
+	padding: 80px 0 120px;
 }
+
+.gallery__title {
+	font-size: 90px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.gallery__lead {
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto 45px;
+}
+
+.gallery-wrap {
+	margin: 0 -12px 42px;
+}
+
+.gallery-wrap__row {
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.gallery-wrap__row:before, .gallery-wrap__row:after {
+	 content: " ";
+    display: table;
+}
+   
+
+.gallery-wrap__img {
+	float: left;
+	margin: 0 12px 12px;
+}
+
+.width-2-3 {
+	width: calc((100% - 48px) * 0.6666);
+}
+
+.width-1-3 {
+	width: calc((100% - 48px) * 0.3333);
+	height: 50%;
+}
+
+.width-1-2 {
+	width: calc((100% - 48px) * 0.5);
+}
+
+.gallery__button {
+	margin: 0 auto;
+	padding: 10px 15px;
+	background-color: #5585a2;
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	min-width: 200px;
+}
+
+.gallery__button:focus {
+	border: 2px solid #000;
+}
+
+.gallery__button:hover {
+	background-color: #fff;
+	color: #5585a2;
+}
+
+.gallery__button:active {
+	background-color: red;
+}
+
+.footer {
+	flex: 0 0 auto;
+	background-color: #262626;
+	color: #b9b9b9;	
+	padding: 30px 0;
+}
+
+.footer__row {
+	display: flex;
+	flex-direction: row;
+   flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer__text-date {
+	font-size: 16px;
+}
+
+.footer__text-autor {
+	font-size: 15px;
+}
+
+.footer__link {
+	color: #f12b55;
+	text-decoration: none;
+}
+
+.footer__link:focus {
+	border: 2px solid #2e2;
+}
+
+.footer__link:hover {
+	color: #2e2;
+}
+
+.footer__link:active {
+	background-color: red;
+}
+
