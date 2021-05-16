@@ -19,88 +19,91 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="header__row">
-					<div class="logo">
+				<div class="nav">
+					<div class="nav__item logo">
 						<a class="logo__link" href="#">
-							<img src="img/logo.svg" alt="logo Cahee">
+							<img src="img/logo.png" alt="logo Cahee">
 						</a>
 					</div>
-					<nav class="nav">	
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#">Home</a></div>
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#about-us">About</a></div>
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#services">Services</a></div>
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#galleries">Gallery</a></div>
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#">Blog</a></div>
-						<div class="nav-menu__item"><a class="nav-menu__link" href="#">Contact</a></div>
-					</nav>
+					<ul class="nav__item main-menu">	
+						<li class="main-menu__item"><a class="main-menu__link" href="#">Home</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#about-us">About</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#service">Services</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#gallery">Gallery</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#">Blog</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#">Contact</a></li>
+					</ul>
 				</div>
-				<div class="header__lead--width-lead">
+				<div class="header__lead">
 					<h1 class="header__title">Fresh Life</h1>
 					<p class="header__description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-					<button class="button button--orange header__button">Get free now
+					<button class="button button--orange">Get free now
 					</button>
 				</div>
-				<a class="scroll" href="#about-us"></a>
+				<a class="btn-scroll" href="#about-us"></a>
 			</div>
 		</header>
 		<main class="main">
-			<section id="about-us" class="about">
+			<section id="about-us" class="about-us">
 				<div class="container"> 
-					<div class="about__row">
-						<div class="about__img">
+					<div class="about-us__row">
+						<div class="about-us__img">
 							<img class="img-responsive" src="img/img-about.png" alt="img about">
 						</div>
-						<div class="about__content">
-							<h2 class="about__title">About Us</h2>
-							<p class="about__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-							<p class="about__text">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+						<div class="about-us__content">
+							<h2 class="about-us__title">About Us</h2>
+							<p class="about-us__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+							<p class="about-us__text">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
 						</div>
 					</div>
 				</div>
 			</section>	
 
-			<section id="services" class="service">
+			<section id="service" class="service">
 				<div class="container"> 
-						<div class="service-row">
+						<div class="service__row">
 							<div class="service__item">
-								<button class="button service-card__button">
-									<p class="service-card__text-button">Online Shopping</p>
-									<img src="img/icon-shopping.svg" alt="icon shopping">
+								<button class="button service__button">
+									<p class="button__title">Online Shopping</p>
+									<img class="button__icon" src="img/icon-shopping.svg" alt="icon shopping">
 								</button>
-								<button class="button service-card__button">
-									<p class="service-card__text-button">Quality Product</p>
-									<img src="img/icon-product.svg" alt="icon product">
+								<button class="button service__button">
+									<p class="button__title">Quality Product</p>
+									<img class="button__icon" src="img/icon-product.svg" alt="icon product">
 								</button>
-								<button class="button service-card__button">
-									<p class="service-card__text-button">Domestic & International Delivery</p>
-									<img src="img/icon-delivery.svg" alt="icon delivery">
+								<button class="button service__button">
+									<p class="button__title">Domestic & International Delivery</p>
+									<img class="button__icon" src="img/icon-delivery.svg" alt="icon delivery">
 								</button>
-								<button class="button service-card__button">
-									<p class="service-card__text-button">Well Organized</p>
-									<img src="img/icon-organized.svg" alt="icon organized">
+								<button class="button service__button">
+									<p class="button__title">Well Organized</p>
+									<img class="button__icon" src="img/icon-organized.svg" alt="icon organized">
 								</button>
 							</div>
-							<h2 class="service__title">Our Services</h2>
+							<div class="service__item">
+								<img src="img/img-service.png" alt="service img">
+								<h2 class="service__title">Our Services</h2>
+							</div>
 						</div>
 					</div>
 			</section>
 
-			<section id="galleries" class="gallery">
+			<section id="gallery" class="gallery">
 				<div class="container">
 				<h2 class="gallery__title">Gallery</h2>
 				<p class="gallery__lead">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="gallery-wrap">
 					<div class="gallery-wrap__row">
-						<div class="gallery-wrap__img width-2-3"><img class="img-responsive" src="img/img.png" alt="peach"></div>
-						<div class="gallery-wrap__img width-1-3"><img class="img-responsive" src="img/img2.png" alt="bilberry"></div>
+						<div class="gallery-wrap__img width-8-12"><img class="img-responsive" src="img/img.png" alt="peach"></div>
+						<div class="gallery-wrap__img width-4-12"><img class="img-responsive" src="img/img2.png" alt="bilberry"></div>
 						<div class="gallery-wrap__img width-1-3"><img class="img-responsive" src="img/img3.png" alt="blackberry"></div>
 					</div>
 					<div class="gallery-wrap__row">
-						<img class="img-responsive gallery-wrap__img width-1-2" src="img/img4.png" alt="muesli">
-						<img class="img-responsive gallery-wrap__img width-1-2" src="img/img5.png" alt="persimmonм">
+						<img class="img-responsive gallery-wrap__img width-6-12" src="img/img4.png" alt="muesli">
+						<img class="img-responsive gallery-wrap__img width-6-12" src="img/img5.png" alt="persimmonм">
 					</div>
 				</div>
-				<button class="button gallery__button">View more</button>
+				<button class="button button--grey">View more</button>
 				</div>
 			</section>	
 			</main>
