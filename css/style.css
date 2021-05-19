@@ -195,11 +195,14 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 70px 0;
 }
 
-.about-us__row {
+.row-flex {
 	display: flex;
 	flex-direction: row;
    flex-wrap: wrap;
    justify-content: space-between;
+}
+
+.about-us__row {
    align-items: center;
 }
 
@@ -241,13 +244,6 @@ h1, h2, h3, h4, h5, h6, p {
 .service {
 	background-color: #70bfff;
 	padding: 180px 0 150px 100px;
-}
-
-.service__row {
-	display: flex;
-	flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-between;
 }
 
 .service__item {
@@ -430,6 +426,37 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: red;
 }
 
+.blog {
+	background-color: #b07cf7;
+	text-align: center;
+	padding: 90px 0 120px;
+	color: #fff;
+}
+
+.blog__title {
+	margin-bottom: 15px;
+}
+
+.blog__lead {
+	max-width: 570px;
+	margin: 0 auto 40px;
+}
+
+.blog__row {
+	margin-bottom: 50px;
+}
+
+.blog__card {
+	width: calc((100% - 60px) / 3);
+	flex-basis: 370px;
+	flex-grow: 0;
+	flex-shrink: 1;
+}
+
+.button--red {
+	background-color: #f72b3b;
+}
+
 .contact {
 	background-image: url('../img/bg-contact.png');
 	background-position: center center;
@@ -458,13 +485,6 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: #262626;
 	color: #b9b9b9;	
 	padding: 30px 0;
-}
-
-.footer__row {
-	display: flex;
-	flex-direction: row;
-   flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 .footer__text-date {
