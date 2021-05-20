@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p {
 .header {
 	flex: 0 1 auto;
 	background-color: #f9f8fb;
-	background-image: url(../img/img-header.jpg);
+	background-image: url(../image/img-header.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: red;
 }
 
-.header__lead--width-lead {
+.header__lead {
 	max-width: 385px;
 }
 
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: absolute;
 	bottom: 150px;
 	left: 50%;
-	background: url(../img/scroll.png) 50% no-repeat;
+	background: url(../image/scroll.png) 50% no-repeat;
 	background-size: cover;
 }
 
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .subscribe-us {
-	background-image: url('../img/bg.png');
+	background-image: url('../image/bg.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 130px 0 150px;
@@ -458,13 +458,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .contact {
-	background-image: url('../img/bg-contact.png');
+	background-image: url('../image/bg-contact.png');
 	background-position: center center;
 	background-size: cover;
 	padding: 90px 0 120px;
 	text-align: center;
 }
-
 .contact__title {
 	margin-bottom: 10px;
 }
@@ -474,9 +473,40 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: 0 auto 35px;
 }
 
-.contact__row {
+.contact-info {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: start;
+}
+
+.form-feedback__field {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.form-feedback__field {
+	background-color: #76DADC;
+	opacity: 0.5;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	width: 570px;
+	margin-bottom: 15px;
+	border: none;
+}
+
+.form-feedback__field:last-child {
+	margin-bottom: 0;
+}
+
+.form-feedback__field::placeholder {
+	color: #fff;
+}
+
+.form-feedback__field:focus-visible {
+	opacity: 1;
+	outline: none;
 }
 
 .footer {
