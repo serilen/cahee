@@ -188,13 +188,13 @@
 				<div class="container">
 					<h2 class="title contact__title">Contact</h2>
 					<p class="contact__lead">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
-					<div class="row-flex contact__row">
-						<div class="col-5 cotact-input">
+					<div class="row contact__row">
+						<div class="col-5 contact-input">
 							<form class="form-feedback" action="#" method="post">
 								<input class="field-forms form-feedback__field" type="text" name="name" value="" placeholder="Name" required="">
 								<input class="field-forms form-feedback__field" type="email" name="email" value="" placeholder="Your email..." required="">
 								<input class="field-forms form-feedback__field" type="tel" name="phone" value="" placeholder="Your phone number" required="" pattern="[0-9]{10,13}">
-								<textarea rows="10" class="field-forms form-feedback__field" name="message" value="" placeholder="Your message..." required=""></textarea>
+								<textarea rows="10" class="field-forms form-feedback__field form-feedback__field--fixed-width" name="message" value="" placeholder="Your message..." required=""></textarea>
 								<button class="button button--red">Отправить</button>
 							</form>
 						</div>
@@ -202,9 +202,13 @@
 							<h3 class="contact-info__subtitle">Address</h3>
 							<p class="contact-info__text">123 City name, Street, City, Country</p>
 							<h3 class="contact-info__subtitle">Email</h3>
-							<p class="contact-info__text">cahee@domain.com</p>
+							<p class="contact-info__text">
+								<a href="mailto:cahee@domain.com">cahee@domain.com</a>
+							</p>
 							<h3 class="contact-info__subtitle">Phone</h3>
-							<p class="contact-info__text">+012 345 6789</p>
+							<p class="contact-info__text">
+								<a href="tel:+012 345 6789">+012 345 6789</a>
+							</p>
 						</div>
 					</div>
 				</div>

@@ -484,19 +484,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .blog-card__desc-article {
+	position: absolute;
 	height: 40%;
-	width: 100%;
-	
 	background: -webkit-linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
-background: -moz-linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
-background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
-	top: 65%;
-	right: 9%;
+	background: -moz-linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
+	background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
+	bottom: 0;
+	right: 2%;
 	text-align: left;
 }
 
 .blog-card__article-title {
-	font-size: 18px;
+	font-size: 17px;
+	font-weight: 700;
 	line-height: 1.15;
 	margin-bottom: 20px;
 }
@@ -542,10 +542,10 @@ background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
 }
 
 .contact__row {
-	justify-content: start;
+	margin-bottom: 20px;
 }
 
-.cotact-input {
+.contact-input {
 	margin-right: 170px;
 	flex-grow: 1;
 	flex-shrink: 1;
@@ -559,13 +559,13 @@ background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
 	align-items: start;
 }
 
-.form-feedback__field {
-	display: flex;
-	flex-direction: column;
-
+.form-feedback {
+	width: 100%;
 }
 
 .form-feedback__field {
+	display: flex;
+	flex-direction: column;
 	background-color: #76DADC;
 	opacity: 0.5;
 	flex-grow: 1;
@@ -575,6 +575,8 @@ background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
 	margin-bottom: 15px;
 	border: none;
 	border-left: 5px solid transparent;
+	color: #fff;
+	font-weight: 700;
 }
 
 .form-feedback__field:last-child {
@@ -589,6 +591,10 @@ background: linear-gradient(0deg, rgb(38, 38, 38), rgb(255, 255, 255) 50%);
 	opacity: 1;
 	outline: none;
 	border-left: 5px solid #355b82;
+}
+
+.form-feedback__field--fixed-width {
+	resize: none;
 }
 
 .contact-info__text {
