@@ -64,28 +64,32 @@
 
 			<section id="service" class="section-service">
 				<div class="container"> 
-					<div class="row-flex">
-						<div class="service__item">
-							<button class="button service__button">
-								<p class="button__title">Online Shopping</p>
-								<img class="button__icon" src="image/icon-shopping.svg" alt="icon shopping">
-							</button>
-							<button class="button service__button">
-								<p class="button__title">Quality Product</p>
-								<img class="button__icon" src="image/icon-product.svg" alt="icon product">
-							</button>
-							<button class="button service__button">
-								<p class="button__title">Domestic & International Delivery</p>
-								<img class="button__icon" src="image/icon-delivery.svg" alt="icon delivery">
-							</button>
-							<button class="button service__button">
-								<p class="button__title">Well Organized</p>
-								<img class="button__icon" src="image/icon-organized.svg" alt="icon organized">
-							</button>
+					<div class="row">
+						<div class="col-6">
+							<div class="service__item service-col-buttons">
+								<button class="button service__button">
+									<p class="button__title">Online Shopping</p>
+									<img class="button__icon" src="image/icon-shopping.svg" alt="icon shopping">
+								</button>
+								<button class="button service__button">
+									<p class="button__title">Quality Product</p>
+									<img class="button__icon" src="image/icon-product.svg" alt="icon product">
+								</button>
+								<button class="button service__button">
+									<p class="button__title">Domestic & International Delivery</p>
+									<img class="button__icon" src="image/icon-delivery.svg" alt="icon delivery">
+								</button>
+								<button class="button service__button">
+									<p class="button__title">Well Organized</p>
+									<img class="button__icon" src="image/icon-organized.svg" alt="icon organized">
+								</button>
+							</div>
 						</div>
-						<div class="service__item">
-							<img src="image/img-service.png" alt="service img">
-							<h2 class="service__title">Our Services</h2>
+					
+						<div class="col-6">
+							<div class="service__item service-col-title">
+								<h2 class="title service__title">Our Services</h2>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -196,8 +200,8 @@
 					<h2 class="title contact__title">Contact</h2>
 					<p class="contact__lead">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
 					<div class="row contact__row">
-						<div class="col-5 contact-input">
-							<form class="form-feedback" action="#" method="post">
+						<div class="col-6 form-feedback">
+							<form action="#" method="post">
 								<input class="field-forms form-feedback__field" type="text" name="name" value="" placeholder="Name" required="">
 								<input class="field-forms form-feedback__field" type="email" name="email" value="" placeholder="Your email..." required="">
 								<input class="field-forms form-feedback__field" type="tel" name="phone" value="" placeholder="Your phone number" required="" pattern="[0-9]{10,13}">
