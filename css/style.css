@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-top: 0;
 }
 
+a, button, input {
+	outline: none;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -42,21 +46,20 @@ h1, h2, h3, h4, h5, h6, p {
 	min-height: 100%;
 	padding: 45px 0;
 	position: relative;
-	min-height: 1000px;
 }
 
 .logo {
-	flex: 0 0 130px;
+	min-width: 130px;
 }
 
 .logo__link {
 	display: block;
-	outline: 3px solid transparent;
-	outline-offset: -3px;
+	box-shadow: 0 0 0 7px transparent;
+	filter: drop-shadow(2px 4px 6px transparent);
 }
 
 .logo__link:focus {
-	outline-color: #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .logo__link:hover {
@@ -76,13 +79,6 @@ h1, h2, h3, h4, h5, h6, p {
 	align-items: center;
 }
 
-.nav__item {
-	padding: 0;
-	flex-grow: 0;
-	flex-shrink: 1;
-	flex-basis: auto;
-}
-
 .main-menu {
 	list-style: none;
 	display: flex;
@@ -94,22 +90,16 @@ h1, h2, h3, h4, h5, h6, p {
 	font-size: 16px;
 	font-weight: 700;
 	text-align: center;
-}
-
-.main-menu__item {
-   flex-grow: 0;
-   flex-shrink: 1;
-   flex-basis: auto;
+	padding-left: 0;
 }
 
 .main-menu__link {
 	padding: 12px 18px;
 	display: block;
 	position: relative;
-	outline: 3px solid transparent;
-	outline-offset: -3px;
 	text-decoration: none;
 	color: inherit;
+	box-shadow: 0px 0px 0px 7px transparent;
 }
 
 .main-menu__link:before {
@@ -119,7 +109,6 @@ h1, h2, h3, h4, h5, h6, p {
 	content: '';
 	width: calc(100% - 36px);
 	height: 3px;
-	margin: 0 auto;
 	background-color: transparent;
 }
 
@@ -129,11 +118,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 .main-menu__link:focus{
-	outline-color: #2323e2;
+	box-shadow: 0px 0px 0px 4px #ee7897;
 }
 
 .main-menu__link:active{
-	background-color: #ee7897;
+	background-color: #EFF2DA;
 }
 
 .header__lead {
@@ -153,8 +142,7 @@ h1, h2, h3, h4, h5, h6, p {
 .button {
 	display: inline-flex;
 	justify-content: center;
-	outline: 3px solid transparent;
-	outline-offset: -3px;
+	box-shadow: 0 0 0 4px transparent;
 	min-width: 200px;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -168,13 +156,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button--orange:focus {
-	outline-color: #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .button--orange:hover {
 	color: orange;
 	background-color: #fff;
-	outline: 1px solid #000;
+	box-shadow: 1px solid #000;
 }
 
 .button--orange:active {
@@ -191,11 +179,12 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 50%;
 	background: url(../image/scroll.png) 50% no-repeat;
 	background-size: cover;
-	outline: 3px solid transparent;
+	box-shadow: 0 0 0 4px transparent;
+	filter: drop-shadow(2px 4px 6px transparent);
 }
 
 .btn-scroll:focus {
-	outline-color: #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .btn-scroll:hover {
@@ -214,6 +203,7 @@ h1, h2, h3, h4, h5, h6, p {
 .section-about-us {
 	flex: 0 1 auto;
 	background-color: #00b0b0;
+	background-size: cover;
 	padding: 70px 0;
 }
 
@@ -301,7 +291,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .service__button:focus {
-	outline: 3px solid #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .service__button:hover {
@@ -311,8 +301,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .service__button:active {
-	background-color: red;
-	opacity: 0.5;
+	background-color: #ee7897;
 }
 
 .button__title {
@@ -375,7 +364,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button--grey:focus {
-	outline: 3px solid #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .button--grey:hover {
@@ -384,7 +373,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button--grey:active {
-	background-color: red;
+	background-color: #ee7897;
 }
 
 .section-subscribe-us {
@@ -429,11 +418,11 @@ h1, h2, h3, h4, h5, h6, p {
 	flex-grow: 0;
 	flex-shrink: 1;
 	min-width: 170px;
-	box-shadow: 0 2px 5px 2px rgba(0,0,0,0.5);
+	box-shadow: 0 0 0 4px transparent;
 }
 
 .form-subscribe-us__button:focus {
-	outline: 3px solid #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .form-subscribe-us__button:hover {
@@ -442,7 +431,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .form-subscribe-us__button:active {
-	background-color: red;
+	background-color: #ee7897;
 }
 
 .section-blog {
@@ -474,11 +463,11 @@ h1, h2, h3, h4, h5, h6, p {
 	display: block;
    text-decoration: none;
    color: inherit;
-   outline: 3px solid transparent;
+   box-shadow: 0 0 0 4px transparent;
 }
 
 .blog-card__link:focus {
-	outline: 3px solid #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .blog-card__link:hover {
@@ -532,10 +521,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 .button--red {
 	background-color: #f72b3b;
+	box-shadow: 0 0 0 4px transparent;
 }
 
 .button--red:focus {
-	outline: 3px solid #2323e2;
+	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .button--red:hover {
@@ -544,7 +534,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .button--red:active {
-	background-color: #5585a2;
+	background-color: #ee7897;
 }
 
 .section-contact {
@@ -600,7 +590,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .form-feedback__field:focus-visible {
 	opacity: 1;
-	outline: none;
 	border-left: 5px solid #355b82;
 }
 
@@ -643,11 +632,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer__link {
 	color: #f12b55;
+	box-shadow: 0 0 0 7px transparent;
 	text-decoration: none;
 }
 
 .footer__link:focus {
-	outline: 3px solid #2323e2;
+box-shadow: 0 0 0 4px #ee7897;
 }
 
 .footer__link:hover {
@@ -655,6 +645,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer__link:active {
-	background-color: red;
+	background-color: #ee7897;
 }
 
