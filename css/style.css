@@ -3,7 +3,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	transition: all .3s ease-in;
+	transition: all .1s ease-in;
 }
 
 html, body{
@@ -22,6 +22,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 a, button, input {
 	outline: none;
+	box-shadow: 0 0 0 2px transparent;
+}
+
+a:focus,
+button:focus,
+input:focus {
+	box-shadow: 0 0 0 2px #ee7897;
 }
 
 .wrapper {
@@ -43,7 +50,7 @@ a, button, input {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 100%;
+	min-height: 1000px;
 	padding: 45px 0;
 	position: relative;
 }
@@ -54,21 +61,10 @@ a, button, input {
 
 .logo__link {
 	display: block;
-	box-shadow: 0 0 0 7px transparent;
-	filter: drop-shadow(2px 4px 6px transparent);
-}
-
-.logo__link:focus {
-	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .logo__link:hover {
-	filter: drop-shadow(2px 4px 6px #000);
-	opacity: 0.4;
-}
-
-.logo__link:active {
-	background-color: #ee7897;
+	opacity: 0.8;
 }
 
 .nav {
@@ -99,7 +95,6 @@ a, button, input {
 	position: relative;
 	text-decoration: none;
 	color: inherit;
-	box-shadow: 0px 0px 0px 7px transparent;
 }
 
 .main-menu__link:before {
@@ -114,11 +109,6 @@ a, button, input {
 
 .main-menu__link:hover::before {
 	background-color: #ff6033;
-}
-
-
-.main-menu__link:focus{
-	box-shadow: 0px 0px 0px 4px #ee7897;
 }
 
 .main-menu__link:active{
@@ -142,27 +132,24 @@ a, button, input {
 .button {
 	display: inline-flex;
 	justify-content: center;
-	box-shadow: 0 0 0 4px transparent;
+	box-shadow: 0 0 0 2px transparent;
 	min-width: 200px;
 	text-transform: uppercase;
 	font-size: 20px;
 	color: #fff;
 	padding: 14px 20px;
 	border: none;
+	position: relative;
 }
 
 .button--orange {
-	background-color: orange;
-}
-
-.button--orange:focus {
-	box-shadow: 0 0 0 4px #ee7897;
+	background-color: #ff6033;
 }
 
 .button--orange:hover {
-	color: orange;
+	color: #ff6033;
 	background-color: #fff;
-	box-shadow: 1px solid #000;
+	box-shadow: 0 0 0 2px #ff6033;
 }
 
 .button--orange:active {
@@ -173,27 +160,16 @@ a, button, input {
 	display: block;
 	width: 24px;
 	height: 40px;
-	margin-left: -15px;
+	transform: translateX(-50%);
 	position: absolute;
 	bottom: 150px;
 	left: 50%;
 	background: url(../image/scroll.png) 50% no-repeat;
 	background-size: cover;
-	box-shadow: 0 0 0 4px transparent;
-	filter: drop-shadow(2px 4px 6px transparent);
-}
-
-.btn-scroll:focus {
-	box-shadow: 0 0 0 4px #ee7897;
 }
 
 .btn-scroll:hover {
-	filter: drop-shadow(2px 4px 6px #000);
-	opacity: 0.4;
-}
-
-.btn-scroll:active {
-	background-color: #ee7897;
+	opacity: 0.8;
 }
 
 .main {
@@ -201,25 +177,9 @@ a, button, input {
 }
 
 .section-about-us {
-	flex: 0 1 auto;
 	background-color: #00b0b0;
 	background-size: cover;
 	padding: 70px 0;
-}
-
-.row-flex {
-	display: flex;
-	flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-between;
-}
-
-.about-us {
-	position: relative;
-}
-
-.about-us__img {
-	filter: drop-shadow(-20px 7px 50px rgba(0,0,0,0.3));
 }
 
 .img-responsive {
@@ -228,75 +188,87 @@ a, button, input {
 	display: block;
 }
 
-.about-us__content {
-	margin-right: 85px;
+.about-us__img {
+	filter: drop-shadow(-20px 7px 50px rgba(0,0,0,0.3));
+}
+
+.about-us {
    color: #fff;
-   position: relative;
-   height: 100%;
 }
 
-.about-us__content:last-child {
-   margin-right: 0;
-}
-
-.about-us-desc {
-	position: absolute;
-	margin-top: 50%;
-   transform: translateY(-50%);
+.about-us__info {
+	padding-left: 12.2807%;
+	padding-top: 100px;
 }
 
 .title {
 	font-size: 90px;
+	line-height: 1.1;
 }
 
-.about-us-desc__title {
+.about-us__title {
 	margin-bottom: 20px;
 }
 
-.about-us-desc__text {
+.about-us__descr:not(:last-child) {
 	margin-bottom: 10px;
 }
 
-.about-us-desc__text:last-child {
-	margin-bottom: 0;
-}
-
 .section-service {
-	flex: 0 1 auto;
 	background-color: #70bfff;
 	padding: 100px 0 150px;
 }
 
-.service__item {
-	display: flex;
-	flex-direction: column;
-}
-
-.service-col-buttons {
-	padding: 75px 85px 0 100px;
+.service__controls {
+	padding-top: 75px;
+	padding-left: 17.54386%;	
 }
 
 .service__button {
-	flex: 0 1 auto;
-   padding: 25px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	background-color: #fff;
 	margin-bottom: 20px;
-	font-size: 20px;
 	font-weight: 700;
-	text-align: left;
+	text-align: center;
 	min-height: 100px;
+	width: 400px;
+	padding-right: 120px;
+	color: #262626;
+	text-transform: capitalize;
+	align-items: center;
 }
 
-.service__button:focus {
-	box-shadow: 0 0 0 4px #ee7897;
+.service__button::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-left: 1px solid #000;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.service__button--shopping::before {
+	background-image: url('../image/icon-shopping.svg');
+}
+
+.service__button--product::before {
+	background-image: url('../image/icon-product.svg');
+}
+
+.service__button--delivery::before {
+	background-image: url('../image/icon-delivery.svg');
+}
+
+.service__button--organized::before {
+	background-image: url('../image/icon-organized.svg');
 }
 
 .service__button:hover {
-	background-color: #000;
-	opacity: 0.6;
+	background-color: #2a82c9;
 	color: #fff;
 }
 
@@ -304,39 +276,23 @@ a, button, input {
 	background-color: #ee7897;
 }
 
-.button__title {
-	flex-grow: 1;
-	flex-shrink: 0;
-	color: #262626;
-	text-transform: capitalize;
-	align-items: center;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	max-width: 275px;
-	border-right: 1px solid #000;
-}
-
-.button__icon {
-	flex-grow: 0;
-	flex-shrink: 0;
-}
-
 .service__button:last-child {
 	margin-bottom: 0;
 }
 
-.service-col-title {
+.service__info {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	background-image: url(../image/img-service.png);
 	background-repeat: no-repeat;
 	background-position: 100% 0%;
-	padding: 200px 0;
 	text-align: right;
+	min-height: 527px;
 }
 
 .service__title {
-	padding: ;
-   color: #fff;	
+	color: #fff;	
 }
 
 .section-gallery {
@@ -619,6 +575,8 @@ a, button, input {
 }
 
 .row-flex--center {
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 

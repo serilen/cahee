@@ -23,12 +23,12 @@
 				<div class="nav">
 					<div class="nav__item logo">
 						<a class="logo__link" href="#">
-							<img src="image/logo.png" alt="logo Cahee">
+							<img class="img-responsive" src="image/logo.png" alt="logo Cahee">
 						</a>
 					</div>
 					<ul class="main-menu">	
 						<li class="main-menu__item"><a class="main-menu__link" href="#"><span class="main-menu__item-title">Home</span></a></li>
-						<li class="main-menu__item"><a class="main-menu__link" href="#about-us">About</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="#about_us">About</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#service">Services</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#gallery">Gallery</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#blog">Blog</a></li>
@@ -44,18 +44,22 @@
 				<a class="btn-scroll" href="#about-us"></a>
 			</div>
 		</header>
+
 		<main class="main">
-			<section id="about-us" class="section-about-us">
+			<section id="about_us" class="section-about-us">
 				<div class="container"> 
-					<div class="row about-us">
-						<div class="col-6 about-us__content">
-							<img class="img-responsive about-us__img" src="image/img-about.png" alt="plate with raspberries">
-						</div>
-						<div class="col-5 about-us__content">
-							<div class="about-us-desc">
-								<h2 class="title about-us-desc__title">About Us</h2>
-								<p class="about-us-desc__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-								<p class="about-us-desc__text">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+					<div class="about-us">
+						<div class="row">
+							<div class="col-6">
+								<img class="about-us__img img-responsive" src="image/img-about.png" alt="plate with raspberries">						
+							</div>
+							
+							<div class="col-6">
+								<div class="about-us__info">
+									<h2 class="title about-us__title">About Us</h2>
+									<p class="about-us__descr">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+									<p class="about-us__descr">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+								</div>							
 							</div>
 						</div>
 					</div>
@@ -64,178 +68,189 @@
 
 			<section id="service" class="section-service">
 				<div class="container"> 
-					<div class="row">
-						<div class="col-6">
-							<div class="service__item service-col-buttons">
-								<button class="button service__button">
-									<p class="button__title">Online Shopping</p>
-									<img class="button__icon" src="image/icon-shopping.svg" alt="icon shopping">
-								</button>
-								<button class="button service__button">
-									<p class="button__title">Quality Product</p>
-									<img class="button__icon" src="image/icon-product.svg" alt="icon product">
-								</button>
-								<button class="button service__button">
-									<p class="button__title">Domestic & International Delivery</p>
-									<img class="button__icon" src="image/icon-delivery.svg" alt="icon delivery">
-								</button>
-								<button class="button service__button">
-									<p class="button__title">Well Organized</p>
-									<img class="button__icon" src="image/icon-organized.svg" alt="icon organized">
-								</button>
-							</div>
-						</div>
-					
-						<div class="col-6">
-							<div class="service__item service-col-title">
-								<h2 class="title service__title">Our Services</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="gallery" class="section-gallery">
-				<div class="container">
-					<h2 class="title gallery__title">Gallery</h2>
-					<p class="gallery__lead">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="gallery__wrap">
+					<div class="service">
 						<div class="row">
-							<div class="col-8">
-								<img class="img-responsive" src="image/img.png" alt="peach">
+							<div class="col-6">
+								<div class="service__controls">
+									<button class="button service__button service__button--shopping">
+										Online Shopping
+									</button>
+
+									<button class="button service__button service__button--product">
+										Quality Product
+									</button>
+
+									<button class="button service__button service__button--delivery">
+										Domestic & International Delivery
+									</button>
+
+									<button class="button service__button service__button--organized">
+										Well Organized
+									</button>
+
+								</div>
+							</div>
+
+							<div class="col-6">
+								<div class="service__info">
+									<h2 class="title service__title">Our Services</h2>
+								</div>
+							</div>
+						</div></div>
+					</div>
+				</section>
+
+				<section id="gallery" class="section-gallery">
+					<div class="container">
+						<h2 class="title gallery__title">Gallery</h2>
+						<p class="gallery__lead">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<div class="gallery__wrap">
+							<div class="row">
+								<div class="col-8">
+									<img class="img-responsive" src="image/img.png" alt="peach">
+								</div>
+
+								<div class="col-4">
+									<div class="row">
+										<div class="col-12">
+											<img class="img-responsive" src="image/img2.png" alt="bilberry">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<img class="img-responsive" src="image/img3.png" alt="blackberry">
+										</div>
+									</div>
+								</div>
+							</div> <!-- /.row -->
+
+							<div class="row">
+								<div class="col-6">
+									<img class="img-responsive" src="image/img4.png" alt="muesli">
+								</div>
+								<div class="col-6">
+									<img class="img-responsive" src="image/img5.png" alt="persimmonм">
+								</div>
+							</div>
+
+						</div>
+						<button class="button button--grey">View more</button>
+					</div>
+				</section>
+
+				<section class="section-subscribe-us">
+					<div class="container">
+						<h2 class="subscribe-us__title">Subscribe to us</h2>
+						<p class="subscribe-us__desc">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<form class="form-subscribe-us" action="#" method="get">
+							<input class="field-forms form-subscribe-us__field" type="email" name="email" value="" placeholder="Your email address..." required>
+							<button class="button form-subscribe-us__button">Subscribe</button>
+						</form>
+
+					</div>
+				</section>
+
+				<section id="blog" class="section-blog">
+					<div class="container">
+						<h2 class="title blog__title">Blog</h2>
+						<p class="blog__lead">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+						<div class="row blog__row">
+							<div class="col-4">
+								<div class="blog-card">
+									<a class="blog-card__link" href="#">
+										<img class="img-responsive" src="image/img-blog-apples.png" alt="apples">	
+										<div class="blog-card__date">
+											<p>20</p>
+											<p class="blog-card__month">nov</p>
+										</div>
+										<div class="blog-card__desc-article">
+											<p class="blog-card__article-title">Green Smoothies: Too Much of a Good Thing?</p>
+											<p class="blog-card__time-write">By Auskteez - 2 hours ago</p>		
+										</div>
+									</a>
+								</div>
 							</div>
 
 							<div class="col-4">
-								<div class="row">
-									<div class="col-12">
-										<img class="img-responsive" src="image/img2.png" alt="bilberry">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-12">
-										<img class="img-responsive" src="image/img3.png" alt="blackberry">
-									</div>
+								<div class="blog-card">
+									<a class="blog-card__link" href="#">
+										<img class="img-responsive blog-card" src="image/img-blog-pea.png" alt="pea">
+										<div class="blog-card__date">
+											<p>14</p>
+											<p class="blog-card__month">nov</p>
+										</div>
+										<div class="blog-card__desc-article">
+											<p class="blog-card__article-title">Growing Food and a “Thirst” for Innovation</p>
+											<p class="blog-card__time-write">By Auskteez - 3 hours ago</p>		
+										</div>
+									</a>
 								</div>
 							</div>
-						</div> <!-- /.row -->
 
-						<div class="row">
-							<div class="col-6">
-								<img class="img-responsive" src="image/img4.png" alt="muesli">
+							<div class="col-4 blog-card">
+								<div class="blog-card">
+									<a class="blog-card__link" href="#">
+										<img class="img-responsive" src="image/img-blog-raspberry.png" alt="raspberry">
+										<div class="blog-card__date">
+											<p>10</p>
+											<p class="blog-card__month">nov</p>
+										</div>
+										<div class="blog-card__desc-article">
+											<p class="blog-card__article-title">Pesticides & Food: What You Need to Know</p>
+											<p class="blog-card__time-write">By Auskteez - 6 hours ago</p>		
+										</div>
+									</a>
+								</div>
 							</div>
-							<div class="col-6">
-								<img class="img-responsive" src="image/img5.png" alt="persimmonм">
+
+						</div>
+						<button class="button button--red">View more</button>
+					</div>
+				</section>
+
+				<section id="contact" class="section-contact">
+					<div class="container">
+						<h2 class="title contact__title">Contact</h2>
+						<p class="contact__lead">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
+						<div class="row contact__row">
+							<div class="col-6 form-feedback">
+								<form action="#" method="post">
+									<input class="field-forms form-feedback__field" type="text" name="name" value="" placeholder="Name" required="">
+									<input class="field-forms form-feedback__field" type="email" name="email" value="" placeholder="Your email..." required="">
+									<input class="field-forms form-feedback__field" type="tel" name="phone" value="" placeholder="Your phone number" required="" pattern="[0-9]{10,13}">
+									<textarea rows="10" class="field-forms form-feedback__field form-feedback__field--fixed-width" name="message" value="" placeholder="Your message..." required=""></textarea>
+									<button class="button button--red">Отправить</button>
+								</form>
+							</div>
+							<div class="col-5 contact-info">
+								<h3 class="contact-info__subtitle">Address</h3>
+								<p class="contact-info__text">123 City name, Street, City, Country</p>
+								<h3 class="contact-info__subtitle">Email</h3>
+								<p class="contact-info__text">
+									<a href="mailto:cahee@domain.com">cahee@domain.com</a>
+								</p>
+								<h3 class="contact-info__subtitle">Phone</h3>
+								<p class="contact-info__text">
+									<a href="tel:+012 345 6789">+012 345 6789</a>
+								</p>
 							</div>
 						</div>
-
 					</div>
-					<button class="button button--grey">View more</button>
-				</div>
-			</section>
-			<section class="section-subscribe-us">
+				</section>
+			</main>
+
+			<footer class="footer">
 				<div class="container">
-					<h2 class="subscribe-us__title">Subscribe to us</h2>
-					<p class="subscribe-us__desc">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<form class="form-subscribe-us" action="#" method="get">
-						<input class="field-forms form-subscribe-us__field" type="email" name="email" value="" placeholder="Your email address..." required>
-						<button class="button form-subscribe-us__button">Subscribe</button>
-					</form>
-
-				</div>
-			</section>
-			<section id="blog" class="section-blog">
-				<div class="container">
-					<h2 class="title blog__title">Blog</h2>
-					<p class="blog__lead">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-					<div class="row blog__row">
-
-						<div class="col-4 blog-card">
-							<a class="blog-card__link" href="#">
-								<img class="img-responsive" src="image/img-blog-apples.png" alt="apples">	
-								<div class="blog-card__date">
-									<p>20</p>
-									<p class="blog-card__month">nov</p>
-								</div>
-								<div class="blog-card__desc-article">
-									<p class="blog-card__article-title">Green Smoothies: Too Much of a Good Thing?</p>
-									<p class="blog-card__time-write">By Auskteez - 2 hours ago</p>		
-								</div>
-							</a>
-						</div>
-
-						<div class="col-4 blog-card">
-							<a class="blog-card__link" href="#">
-								<img class="img-responsive blog-card" src="image/img-blog-pea.png" alt="pea">
-								<div class="blog-card__date">
-									<p>14</p>
-									<p class="blog-card__month">nov</p>
-								</div>
-								<div class="blog-card__desc-article">
-									<p class="blog-card__article-title">Growing Food and a “Thirst” for Innovation</p>
-									<p class="blog-card__time-write">By Auskteez - 3 hours ago</p>		
-								</div>
-							</a>
-						</div>
-
-						<div class="col-4 blog-card">
-							<a class="blog-card__link" href="#">
-								<img class="img-responsive" src="image/img-blog-raspberry.png" alt="raspberry">
-								<div class="blog-card__date">
-									<p>10</p>
-									<p class="blog-card__month">nov</p>
-								</div>
-								<div class="blog-card__desc-article">
-									<p class="blog-card__article-title">Pesticides & Food: What You Need to Know</p>
-									<p class="blog-card__time-write">By Auskteez - 6 hours ago</p>		
-								</div>
-							</a>
-						</div>
-
-					</div>
-					<button class="button button--red">View more</button>
-				</div>
-			</section>
-			<section id="contact" class="section-contact">
-				<div class="container">
-					<h2 class="title contact__title">Contact</h2>
-					<p class="contact__lead">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
-					<div class="row contact__row">
-						<div class="col-6 form-feedback">
-							<form action="#" method="post">
-								<input class="field-forms form-feedback__field" type="text" name="name" value="" placeholder="Name" required="">
-								<input class="field-forms form-feedback__field" type="email" name="email" value="" placeholder="Your email..." required="">
-								<input class="field-forms form-feedback__field" type="tel" name="phone" value="" placeholder="Your phone number" required="" pattern="[0-9]{10,13}">
-								<textarea rows="10" class="field-forms form-feedback__field form-feedback__field--fixed-width" name="message" value="" placeholder="Your message..." required=""></textarea>
-								<button class="button button--red">Отправить</button>
-							</form>
-						</div>
-						<div class="col-5 contact-info">
-							<h3 class="contact-info__subtitle">Address</h3>
-							<p class="contact-info__text">123 City name, Street, City, Country</p>
-							<h3 class="contact-info__subtitle">Email</h3>
-							<p class="contact-info__text">
-								<a href="mailto:cahee@domain.com">cahee@domain.com</a>
-							</p>
-							<h3 class="contact-info__subtitle">Phone</h3>
-							<p class="contact-info__text">
-								<a href="tel:+012 345 6789">+012 345 6789</a>
-							</p>
-						</div>
+					<div class="row-flex--center">
+						<p class="footer__text-date">© 2015 Company. All right reserved.</p>
+						<a class="logo__link" href="#">
+							<img src="image/logo-small.png" alt="logo">
+						</a>
+						<p class="footer__text-autor">Made with <a class="footer__link" href="#">love</a> by Auskteez</p>
 					</div>
 				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="row-flex row-flex--center">
-					<p class="footer__text-date">© 2015 Company. All right reserved.</p>
-					<a class="logo__link" href="#">
-						<img src="image/logo-small.png" alt="logo">
-					</a>
-					<p class="footer__text-autor">Made with <a class="footer__link" href="#">love</a> by Auskteez</p>
-				</div>
-			</div>
-		</footer>	
-	</div>	
-</body>
-</html>
+			</footer>
+
+		</div>	
+	</body>
+	</html>
