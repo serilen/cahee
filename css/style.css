@@ -414,6 +414,10 @@ input:focus {
 	margin: 0 auto 40px;
 }
 
+.blog-wrap {
+	margin-bottom: 50px;
+}
+
 .blog-card {
 	display: block;
    text-decoration: none;
