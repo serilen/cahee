@@ -22,6 +22,7 @@ $map-breakpoints: (
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left: -$gutter;
   margin-right: -$gutter;
 
@@ -35,6 +36,7 @@ $map-breakpoints: (
   padding-right: $gutter;
   min-height: 1px;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 @each $size, $breakpoint in $map-breakpoints {
@@ -58,7 +60,7 @@ $map-breakpoints: (
 
 @each $size, $breakpoint in $map-breakpoints {
   @media (min-width: $breakpoint) {
-    @for $i from 11 through 1 {
+    @for $i from 11 through 0 {
     .col-#{$size}-offset-#{$i} {
         margin-left: (100% / 12) * $i;
       }
