@@ -124,6 +124,20 @@ input:focus {
 	}
 }
 
+.sr-only {
+	position: absolute;
+	margin: -1px 0 0 -1px;
+	padding: 0;
+	display: block;
+	width: 1px;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+	outline: 0;
+}
 
 .wrapper {
 	display: flex;
@@ -169,10 +183,29 @@ input:focus {
 
 .nav {
 	display: flex;
-	flex-wrap: wrap;
 	margin-bottom: 235px;
 	justify-content: space-between;
 	align-items: center;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.burger-button {
+	font-size: 30px;
+	visibility: hidden;
+	background-color: inherit;
+	border: none;
+	&:focus {
+		box-shadow: none;
+	}
+
+	@media (max-width: 778px) {
+			visibility: inherit;
+		}
 }
 
 .main {
@@ -180,16 +213,21 @@ input:focus {
 
 	&-menu {
 		list-style: none;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 700;
 		text-align: center;
 		padding-left: 0;
+
+		@media (max-width: 778px) {
+		}
+
+		&--show {
+			display: block;
+			position: absolute;
+			top: 9%;
+			right: 0;
+		}
 
 		&__link {
 			padding: 12px 18px;
@@ -244,8 +282,6 @@ input:focus {
 		text-align: center;
 	}
 }
-
-
 
 .about-us {
 	color: #fff;
