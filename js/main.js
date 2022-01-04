@@ -18,7 +18,7 @@
 			let width = $('body').innerWidth()
 			if(width < 778) {
 
-				$("#main_menu").addClass("sr-only");
+				$("#main_menu").addClass("sr-only").removeClass('main-menu--show');;
 			} else {
 				$("#main_menu").removeClass("sr-only").removeClass('main-menu--show');
 			}
