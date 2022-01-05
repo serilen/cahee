@@ -1,3 +1,4 @@
+@import '_variables.scss';
 //mixins
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;
@@ -223,7 +224,7 @@ input:focus {
 		box-shadow: none;
 	}
 
-	@media (max-width: 778px) {
+	@media (max-width: $screen-sm-max) {
 		visibility: inherit;
 	}
 	&__line {
@@ -273,7 +274,7 @@ input:focus {
 			text-decoration: none;
 			color: inherit;
 
-			@media (max-width: 778px) {
+			@media (max-width: $screen-sm-max) {
 				padding: 10px 15px;
 			}
 
@@ -322,8 +323,8 @@ input:focus {
 	background-color: #00b0b0;
 	background-size: cover;
 	padding: 70px 0;
-	@media (max-width: 576px) {
-		padding: 20px 0;
+	@media (max-width: $screen-sm-max) {
+		padding: 40px 0;
 		text-align: center;
 	}
 }
@@ -333,7 +334,8 @@ input:focus {
 
 	&__img {
 		filter: drop-shadow(-20px 7px 50px rgba(0,0,0,0.3));
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
+			width: 60%;
 			@include push--auto;
 		}
 	}
@@ -341,12 +343,21 @@ input:focus {
 	&__info {
 		padding-left: 12.2807%;
 		padding-top: 100px;
-		@media (max-width: 778px) {
+
+		@media (max-width: $screen-lg-max) {
 			padding-top: 50px;
+			padding-left: 30px;
+		}
+
+		@media (max-width: $screen-md-max) {
 			padding-left: 0;
 			text-align: center;
 		}
-		@media (max-width: 576px) {
+
+		@media (max-width: $screen-sm-max) {
+			
+		}
+		@media (max-width: $screen-xs-max) {
 			padding-top: 20px;
 			text-align: center;
 			padding-left: 0;
@@ -355,18 +366,18 @@ input:focus {
 
 	&__title {
 		margin-bottom: 20px;
-		@media (max-width: 778px) {
+		@media (max-width: $screen-sm-max) {
 			font-size: 50px;
 			margin-bottom: 10px;
 		}
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
 	}
 
 	&__descr {
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
 			font-size: 14px;
 		}
 
@@ -379,7 +390,7 @@ input:focus {
 .section-service {
 	background-color: #70bfff;
 	padding: 100px 0 150px;
-	@media (max-width: 576px) {
+	@media (max-width: $screen-xs-max) {
 		padding: 20px 0;
 		text-align: center;
 	}
@@ -459,18 +470,21 @@ input:focus {
 		background-position: 100% 0%;
 		text-align: right;
 		min-height: 527px;
-		@media (max-width: 778px) {
+
+		@media (max-width: $screen-sm-max) {
 			justify-content: center;
 		}
 	}
 
 	&__title {
 		color: $color-text-light;
-		@media (max-width: 778px) {
+
+		@media (max-width: $screen-sm-max) {
 			font-size: 50px;
 			margin-bottom: 10px;
 		}
-		@media (max-width: 576px) {
+
+		@media (max-width: $screen-xs-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}	
@@ -482,13 +496,13 @@ input:focus {
 	padding: 80px 0 120px;
 	text-align: center;
 
-	@media (max-width: 576px) {
+	@media (max-width: $screen-xs-max) {
 		padding: 20px 0;
 	}
 
 	&__title {
 		margin-bottom: 20px;
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
@@ -498,7 +512,7 @@ input:focus {
 		max-width: 600px;
 		margin: 0 auto 45px;
 
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
 			font-size: 14px;
 		}
 	}
@@ -511,7 +525,7 @@ input:focus {
 
 	&__item {
 		margin-bottom: 30px;
-		@media (max-width: 576px) {
+		@media (max-width: $screen-xs-max) {
 			margin-bottom: 15px;
 		}
 	}
@@ -522,7 +536,7 @@ input:focus {
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 130px 0 150px;
-	@media (max-width: 991px) {
+	@media (max-width: $screen-md-max) {
 		padding: 20px 0;
 		text-align: center;
 	}
@@ -532,7 +546,7 @@ input:focus {
 		font-size: 40px;
 		text-transform: capitalize;
 		margin-bottom: 20px;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
@@ -540,7 +554,7 @@ input:focus {
 
 	&__desc {
 		margin-bottom: 0;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 14px;
 			margin-bottom: 10px;
 		}
@@ -551,7 +565,7 @@ input:focus {
 		&-field {
 			margin-right: 30px;
 			width: 100%;
-			@media (max-width: 991px) {
+			@media (max-width: $screen-md-max) {
 				margin-bottom: 30px;
 			}
 		}
@@ -567,7 +581,7 @@ input:focus {
 	min-height: 865px;
 	padding: 100px 0;
 	color: $color-text-light;
-	@media (max-width: 991px) {
+	@media (max-width: $screen-md-max) {
 		padding: 20px 0;
 	}
 }
@@ -577,7 +591,7 @@ input:focus {
 
 	&__title {
 		margin-bottom: 15px;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
@@ -586,7 +600,7 @@ input:focus {
 	&__lead {
 		max-width: 570px;
 		margin: 0 auto 40px;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 14px;
 		}
 	}
@@ -601,7 +615,7 @@ input:focus {
 		color: inherit;
 		position: relative;
 		font-weight: 700;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			margin-bottom: 30px;
 			font-size: 14px;
 		}
@@ -628,7 +642,7 @@ input:focus {
 			font-size: 32px;
 			line-height: 1;
 			border-radius: 6px;
-			@media (max-width: 991px) {
+			@media (max-width: $screen-md-max) {
 				font-size: 20px;
 			}
 		}
@@ -636,7 +650,7 @@ input:focus {
 		&__month {
 			text-transform: uppercase;
 			font-size: 21px;
-			@media (max-width: 991px) {
+			@media (max-width: $screen-md-max) {
 				font-size: 16px;
 			}
 		}
@@ -655,7 +669,7 @@ input:focus {
 		&__title {
 			font-size: 20px;
 			margin-bottom: 20px;
-			@media (max-width: 991px) {
+			@media (max-width: $screen-md-max) {
 				font-size: 16px;
 			}
 		}
@@ -674,7 +688,7 @@ input:focus {
 	background-position: center center;
 	background-size: cover;
 	padding: 90px 0 120px;
-	@media (max-width: 991px) {
+	@media (max-width: $screen-md-max) {
 		padding: 30px 0;
 	}
 }
@@ -684,7 +698,7 @@ input:focus {
 	&__title {
 		margin-bottom: 10px;
 		text-align: center;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
@@ -694,14 +708,14 @@ input:focus {
 		max-width: 370px;
 		margin: 0 auto 35px;
 		text-align: center;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			font-size: 14px;
 		}
 	}
 
 	&__info {
 		padding-left: 70px;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			padding-left: 0;
 		}
 
@@ -733,7 +747,7 @@ input:focus {
 .form-feedback {
 	max-width: 500px;
 	color: $color-text-light;
-	@media (max-width: 991px) {
+	@media (max-width: $screen-md-max) {
 		margin-bottom: 30px;
 	}
 
@@ -778,7 +792,7 @@ input:focus {
 	padding: 30px 0;
 
 	&__item {
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			margin-bottom: 30px;
 		}
 	}
@@ -786,7 +800,7 @@ input:focus {
 
 	&__copyright {
 		font-size: 16px;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			text-align: center;
 		}
 	}
@@ -794,7 +808,7 @@ input:focus {
 	&__text-author {
 		font-size: 15px;
 		text-align: right;
-		@media (max-width: 991px) {
+		@media (max-width: $screen-md-max) {
 			text-align: center;
 		}
 	}
