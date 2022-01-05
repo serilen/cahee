@@ -43,7 +43,7 @@ input:focus {
   padding: 14px;
   font-size: 15px; }
 
-.button {
+.btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -59,41 +59,41 @@ input:focus {
   padding: 14px 20px;
   border: none;
   position: relative; }
-  .button--orange {
+  .btn--orange {
     background-color: #ff6033; }
-    .button--orange:hover {
+    .btn--orange:hover {
       color: #ff6033;
       background-color: #fff;
       -webkit-box-shadow: 0 0 0 2px #ff6033;
       box-shadow: 0 0 0 2px #ff6033; }
-    .button--orange:active {
+    .btn--orange:active {
       background-color: #ee7897; }
-  .button--grey {
+  .btn--grey {
     background-color: #5585a2; }
-    .button--grey:hover {
+    .btn--grey:hover {
       background-color: #fff;
       color: #5585a2;
       -webkit-box-shadow: 0 0 0 2px #5585a2;
       box-shadow: 0 0 0 2px #5585a2; }
-    .button--grey:active {
+    .btn--grey:active {
       background-color: #ee7897; }
-  .button--green {
+  .btn--green {
     background-color: #96b92c; }
-    .button--green:hover {
+    .btn--green:hover {
       color: #96b92c;
       background-color: #fff;
       -webkit-box-shadow: 0 0 0 2px #96b92c;
       box-shadow: 0 0 0 2px #96b92c; }
-    .button--green:active {
+    .btn--green:active {
       background-color: #ee7897; }
-  .button--red {
+  .btn--red {
     background-color: #f72b3b; }
-    .button--red:hover {
+    .btn--red:hover {
       color: #f72b3b;
       background-color: #fff;
       -webkit-box-shadow: 0 0 0 2px #f72b3b;
       box-shadow: 0 0 0 2px #f72b3b; }
-    .button--red:active {
+    .btn--red:active {
       background-color: #ee7897; }
 
 .sr-only {
@@ -168,16 +168,36 @@ input:focus {
     align-items: center; }
 
 .burger-button {
-  font-size: 30px;
+  position: relative;
+  width: 42px;
+  height: 35px;
   visibility: hidden;
   background-color: inherit;
-  border: none; }
+  border: none;
+  padding: 0; }
   .burger-button:focus {
     -webkit-box-shadow: none;
     box-shadow: none; }
   @media (max-width: 778px) {
     .burger-button {
       visibility: inherit; } }
+  .burger-button__line {
+    width: 100%;
+    background-color: #000;
+    height: 5px; }
+    .burger-button__line:before, .burger-button__line:after {
+      display: block;
+      width: 100%;
+      height: 5px;
+      position: absolute;
+      content: "";
+      left: 0;
+      background-color: #000;
+      margin: auto; }
+    .burger-button__line:before {
+      top: 0; }
+    .burger-button__line:after {
+      bottom: 0; }
 
 .main {
   -webkit-box-flex: 1;
@@ -287,7 +307,7 @@ input:focus {
     margin-bottom: 30px; }
   .section-service__controls {
     padding-top: 75px; }
-  .section-service__button {
+  .section-service__btn {
     background-color: #fff;
     margin-bottom: 20px;
     font-weight: 700;
@@ -300,7 +320,7 @@ input:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .section-service__button::before {
+    .section-service__btn::before {
       content: "";
       display: block;
       width: 100px;
@@ -311,20 +331,20 @@ input:focus {
       border-left: 1px solid #000;
       background-repeat: no-repeat;
       background-position: center; }
-    .section-service__button--shopping::before {
+    .section-service__btn--shopping::before {
       background-image: url("../image/icon-shopping.svg"); }
-    .section-service__button--product::before {
+    .section-service__btn--product::before {
       background-image: url("../image/icon-product.svg"); }
-    .section-service__button--delivery::before {
+    .section-service__btn--delivery::before {
       background-image: url("../image/icon-delivery.svg"); }
-    .section-service__button--organized::before {
+    .section-service__btn--organized::before {
       background-image: url("../image/icon-organized.svg"); }
-    .section-service__button:hover {
+    .section-service__btn:hover {
       background-color: #2a82c9;
       color: #fff; }
-    .section-service__button:active {
+    .section-service__btn:active {
       background-color: #ee7897; }
-    .section-service__button:last-child {
+    .section-service__btn:last-child {
       margin-bottom: 0; }
   .section-service__info {
     display: -webkit-box;

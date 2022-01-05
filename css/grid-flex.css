@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px; }
-  @media (max-width: 767px) {
+  @media (max-width: 576px) {
     .row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;

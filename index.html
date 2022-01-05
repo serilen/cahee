@@ -11,7 +11,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
 	<link rel="icon" href="favicon.svg">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/grid-flex.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -28,7 +27,7 @@
 						</a>
 					</div>
 					<button class="nav__item burger-button" id="button_burger">
-						<i class="fa fa-bars burger-button__icon"></i>
+						<span class="burger-button__line"></span>
 					</button>
 					
 					<ul class="nav__item main-menu" id="main_menu">	
@@ -44,7 +43,7 @@
 				<div class="header__lead">
 					<h1 class="header__title">Fresh Life</h1>
 					<p class="header__description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-					<button class="button button--orange">Get free now
+					<button class="btn btn--orange">Get free now
 					</button>
 				</div>
 				<a class="btn-scroll" href="#about_us" id="scroll"></a>
@@ -78,19 +77,19 @@
 						<div class="col-lg-5 col-lg-offset-1 col-md-10 col-md-offset-1">
 							<div class="section-service__item">
 								<div class="section-service__controls">
-									<button class="button section-service__button section-service__button--shopping">
+									<button class="btn section-service__btn section-service__btn--shopping">
 										Online Shopping
 									</button>
 
-									<button class="button section-service__button section-service__button--product">
+									<button class="btn section-service__btn section-service__btn--product">
 										Quality Product
 									</button>
 
-									<button class="button section-service__button section-service__button--delivery">
+									<button class="btn section-service__btn section-service__btn--delivery">
 										Domestic & International Delivery
 									</button>
 
-									<button class="button section-service__button section-service__button--organized">
+									<button class="btn section-service__btn section-service__btn--organized">
 										Well Organized
 									</button>
 								</div>
@@ -128,14 +127,14 @@
 
 							<div class="col-lg-4">
 								<div class="row">
-									<div class="col-lg-12 col-md-6">
+									<div class="col-lg-12 col-sm-6">
 										<div class="gallery__item">
 											<img class="img-responsive" src="image/img2.png" alt="bilberry">
 										</div>
 										
 									</div>
 
-									<div class="col-lg-12 col-md-6">
+									<div class="col-lg-12 col-sm-6">
 										<div class="gallery__item">
 											<img class="img-responsive" src="image/img3.png" alt="blackberry">
 										</div>
@@ -162,7 +161,7 @@
 
 					</div>
 
-					<button class="button button--grey">View more</button>
+					<button class="btn btn--grey">View more</button>
 				</div>
 			</section>
 
@@ -184,7 +183,7 @@
 								</div>
 
 								<div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-3">
-									<button class="button button--green section-subscribe-us__button">Subscribe</button>
+									<button class="btn btn--green section-subscribe-us__button">Subscribe</button>
 								</div>
 							</div>
 						</form>
@@ -206,7 +205,7 @@
 						
 						<div class="blog-wrap">
 							<div class="row">
-								<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">								
+								<div class="col-lg-4 col-lg-offset-0 col-sm-6 col-sm-offset-0">								
 									<a class="blog-card" href="#">
 										<img class="img-responsive" src="image/img-blog-apples.png" alt="apples">	
 										<div class="blog-card__date">
@@ -220,7 +219,7 @@
 									</a>							
 								</div>
 
-								<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-0">								
+								<div class="col-lg-4 col-lg-offset-0 col-sm-6 col-sm-offset-0">								
 									<a class="blog-card" href="#">
 										<img class="img-responsive" src="image/img-blog-pea.png" alt="pea">	
 										<div class="blog-card__date">
@@ -234,7 +233,7 @@
 									</a>							
 								</div>
 
-								<div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0">								
+								<div class="col-lg-4 col-lg-offset-0 col-sm-6 col-sm-offset-3">								
 									<a class="blog-card" href="#">
 										<img class="img-responsive" src="image/img-blog-raspberry.png" alt="raspberry">	
 										<div class="blog-card__date">
@@ -250,7 +249,7 @@
 							</div>
 						</div>
 						
-						<button class="button button--red">View more</button>
+						<button class="btn btn--red">View more</button>
 					</div>
 				</div>
 			</section>
@@ -269,7 +268,7 @@
 									<input class="form__field form-feedback__field" type="email" name="email" value="" placeholder="Your email..." required="">
 									<input class="form__field form-feedback__field" type="tel" name="phone" value="" placeholder="Your phone number" required="" pattern="[0-9]{10,13}">
 									<textarea rows="10" class="form__field form-feedback__field form-feedback__field--fixed-width" name="message" value="" placeholder="Your message..." required=""></textarea>
-									<button class="button button--red">Отправить</button>
+									<button class="btn btn--red">Отправить</button>
 								</form>
 							</div>
 							<div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-2">
