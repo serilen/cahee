@@ -1,3 +1,20 @@
+//mixins
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+@mixin push--auto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+//variable
+$color-text-dark: #262626;
+$color-text-light:  #ffffff;
+
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -10,7 +27,7 @@ html, body{
 	font-family: 'Raleway', Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 300;
-	color: #262626;
+	color: $color-text-dark;
 	line-height: 1.5;
 	height: 100%;	
 	max-height: 100vh;
@@ -61,7 +78,7 @@ input:focus {
 	min-width: 200px;
 	text-transform: uppercase;
 	font-size: 20px;
-	color: #fff;
+	color: $color-text-light;
 	padding: 14px 20px;
 	border: none;
 	position: relative;
@@ -72,7 +89,7 @@ input:focus {
 
 		&:hover {
 			color: #ff6033;
-			background-color: #fff;
+			background-color: $color-text-light;
 			box-shadow: 0 0 0 2px #ff6033;
 		}
 
@@ -85,7 +102,7 @@ input:focus {
 		background-color: #5585a2;
 
 		&:hover {
-			background-color: #fff;
+			background-color: $color-text-light;
 			color: #5585a2;
 			box-shadow: 0 0 0 2px #5585a2;
 		}
@@ -100,7 +117,7 @@ input:focus {
 
 		&:hover {
 			color: #96b92c;
-			background-color: #fff;
+			background-color: $color-text-light;
 			box-shadow: 0 0 0 2px #96b92c;
 		}
 
@@ -114,7 +131,7 @@ input:focus {
 
 		&:hover {
 			color: #f72b3b;
-			background-color: #fff;
+			background-color: $color-text-light;
 			box-shadow: 0 0 0 2px #f72b3b;
 		}
 
@@ -160,7 +177,7 @@ input:focus {
 	}
 
 	&__title {
-		margin-bottom: 10px;
+		-bottom: 10px;
 		font-size: 60px;
 		font-weight: 800;
 	}
@@ -207,31 +224,28 @@ input:focus {
 	}
 
 	@media (max-width: 778px) {
-			visibility: inherit;
-		}
-		&__line {
+		visibility: inherit;
+	}
+	&__line {
+		width: 100%;
+		background-color: #000;
+		height: 5px;
+		&:before,
+		&:after {
+			@include pseudo;
 			width: 100%;
-			background-color: #000;
 			height: 5px;
-			&:before,
-			&:after {
-				display: block;
-				width: 100%;
-				height: 5px;
-				position: absolute;
-				content: "";
-				left: 0;
-				background-color: #000;
-				margin: auto;
-			}
-			&:before {
-				top: 0;
-			}
-	
-			&:after {
-				bottom: 0;
-			}
+			left: 0;
+			background-color: #000;
 		}
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+	}
 }
 
 .main {
@@ -245,14 +259,11 @@ input:focus {
 		text-align: center;
 		padding-left: 0;
 
-		@media (max-width: 778px) {
-		}
-
 		&--show {
 			display: block;
 			position: absolute;
 			top: 9%;
-			right: 0;
+			right: 30%;
 		}
 
 		&__link {
@@ -261,6 +272,10 @@ input:focus {
 			position: relative;
 			text-decoration: none;
 			color: inherit;
+
+			@media (max-width: 778px) {
+				padding: 10px 15px;
+			}
 
 			&:before {
 				position: absolute;
@@ -297,6 +312,10 @@ input:focus {
 	&:hover {
 		opacity: 0.8;
 	}
+	&:focus,
+	&:active {
+		border-radius: 25%;
+	}
 }
 
 .section-about-us {
@@ -310,12 +329,12 @@ input:focus {
 }
 
 .about-us {
-	color: #fff;
+	color: $color-text-light;
 
 	&__img {
 		filter: drop-shadow(-20px 7px 50px rgba(0,0,0,0.3));
 		@media (max-width: 576px) {
-			margin: 0 auto;
+			@include push--auto;
 		}
 	}
 
@@ -377,24 +396,22 @@ input:focus {
 	}
 
 	&__btn {
-		background-color: #fff;
+		background-color: $color-text-light;
 		margin-bottom: 20px;
 		font-weight: 700;
 		text-align: center;
 		min-height: 100px;
 		width: 100%;
 		padding-right: 120px;
-		color: #262626;
+		color: $color-text-dark;
 		text-transform: capitalize;
 		align-items: center;
 
 
 		&::before {
-			content: "";
-			display: block;
+			@include pseudo;
 			width: 100px;
 			height: 100px;
-			position: absolute;
 			right: 0;
 			top: 0;
 			border-left: 1px solid #000;
@@ -421,7 +438,7 @@ input:focus {
 
 		&:hover {
 			background-color: #2a82c9;
-			color: #fff;
+			color: $color-text-light;
 		}
 
 		&:active {
@@ -443,12 +460,12 @@ input:focus {
 		text-align: right;
 		min-height: 527px;
 		@media (max-width: 778px) {
-		justify-content: center;
+			justify-content: center;
 		}
 	}
 
 	&__title {
-		color: #fff;
+		color: $color-text-light;
 		@media (max-width: 778px) {
 			font-size: 50px;
 			margin-bottom: 10px;
@@ -549,7 +566,7 @@ input:focus {
 	text-align: center;
 	min-height: 865px;
 	padding: 100px 0;
-	color: #fff;
+	color: $color-text-light;
 	@media (max-width: 991px) {
 		padding: 20px 0;
 	}
@@ -715,7 +732,7 @@ input:focus {
 
 .form-feedback {
 	max-width: 500px;
-	color: #fff;
+	color: $color-text-light;
 	@media (max-width: 991px) {
 		margin-bottom: 30px;
 	}
@@ -734,7 +751,7 @@ input:focus {
 		}
 
 		&::placeholder {
-			color: #fff;
+			color: $color-text-light;
 		}
 
 		&:focus {
@@ -756,7 +773,7 @@ input:focus {
 }
 
 .footer {
-	background-color: #262626;
+	background-color: $color-text-dark;
 	color: #b9b9b9;	
 	padding: 30px 0;
 
