@@ -36,11 +36,11 @@ input:focus {
   display: block; }
 
 .title {
-  font-size: 90px;
+  font-size: 89px;
   line-height: 1.1; }
 
 .form__field {
-  padding: 14px;
+  padding: 17px;
   font-size: 15px; }
 
 .btn {
@@ -54,6 +54,7 @@ input:focus {
   box-shadow: 0 0 0 2px transparent;
   min-width: 200px;
   text-transform: uppercase;
+  font-family: 'Raleway', Arial, sans-serif;
   font-size: 20px;
   color: #ffffff;
   padding: 14px 20px;
@@ -377,22 +378,26 @@ input:focus {
         justify-content: center; } }
   .section-service__title {
     color: #ffffff; }
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       .section-service__title {
-        font-size: 50px;
+        font-size: 80px;
+        margin-bottom: 10px; } }
+    @media (max-width: 991px) {
+      .section-service__title {
+        font-size: 60px;
         margin-bottom: 10px; } }
     @media (max-width: 575px) {
       .section-service__title {
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 10px; } }
 
 .section-gallery {
   background-color: #ffe92f;
   padding: 80px 0 120px;
   text-align: center; }
-  @media (max-width: 575px) {
+  @media (max-width: 991px) {
     .section-gallery {
-      padding: 20px 0; } }
+      padding: 40px 0; } }
   .section-gallery__title {
     margin-bottom: 20px; }
     @media (max-width: 575px) {
@@ -402,14 +407,20 @@ input:focus {
   .section-gallery__lead {
     max-width: 600px;
     margin: 0 auto 45px; }
-    @media (max-width: 575px) {
+    @media (max-width: 1199px) {
       .section-gallery__lead {
         font-size: 14px; } }
 
 .gallery {
   margin-bottom: 42px; }
+  @media (max-width: 991px) {
+    .gallery {
+      margin-bottom: 30px; } }
   .gallery__item {
     margin-bottom: 30px; }
+    @media (max-width: 991px) {
+      .gallery__item {
+        margin-bottom: 20px; } }
     @media (max-width: 575px) {
       .gallery__item {
         margin-bottom: 15px; } }
@@ -432,7 +443,7 @@ input:focus {
         font-size: 30px;
         margin-bottom: 10px; } }
   .section-subscribe-us__desc {
-    margin-bottom: 0; }
+    margin-bottom: 30px; }
     @media (max-width: 991px) {
       .section-subscribe-us__desc {
         font-size: 14px;
