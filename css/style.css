@@ -471,14 +471,14 @@ input:focus {
   margin-bottom: 50px; }
   .blog__title {
     margin-bottom: 15px; }
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       .blog__title {
         font-size: 30px;
         margin-bottom: 10px; } }
   .blog__lead {
     max-width: 570px;
     margin: 0 auto 40px; }
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       .blog__lead {
         font-size: 14px; } }
   .blog-wrap {
@@ -492,7 +492,7 @@ input:focus {
     @media (max-width: 991px) {
       .blog-card {
         margin-bottom: 30px;
-        font-size: 14px; } }
+        font-size: 12px; } }
     .blog-card:focus {
       -webkit-box-shadow: 0 0 0 2px #ee7897;
       box-shadow: 0 0 0 2px #ee7897; }
@@ -502,6 +502,8 @@ input:focus {
       transform: scale(1.05); }
     .blog-card:active {
       opacity: 0.5; }
+    .blog-card__img {
+      width: 100%; }
     .blog-card__date {
       padding: 5px 10px;
       position: absolute;
@@ -513,11 +515,14 @@ input:focus {
       border-radius: 6px; }
       @media (max-width: 991px) {
         .blog-card__date {
+          font-size: 26px; } }
+      @media (max-width: 575px) {
+        .blog-card__date {
           font-size: 20px; } }
     .blog-card__month {
       text-transform: uppercase;
       font-size: 21px; }
-      @media (max-width: 991px) {
+      @media (max-width: 575px) {
         .blog-card__month {
           font-size: 16px; } }
     .blog-card__info {
@@ -530,18 +535,24 @@ input:focus {
       min-height: 50%;
       bottom: 0;
       left: 0;
-      width: 100%;
-      text-align: left; }
+      text-align: left;
+      width: 100%; }
     .blog-card__title {
       font-size: 20px;
       margin-bottom: 20px; }
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         .blog-card__title {
-          font-size: 16px; } }
+          font-size: 14px; } }
+      @media (max-width: 575px) {
+        .blog-card__title {
+          font-size: 18px; } }
     .blog-card__descr {
       font-size: 13px;
       line-height: 2;
       font-weight: 400; }
+      @media (max-width: 575px) {
+        .blog-card__descr {
+          font-size: 14px; } }
 
 .section-contact {
   -webkit-box-flex: 0;
