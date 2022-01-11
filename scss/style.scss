@@ -248,6 +248,9 @@ input:focus {
 			bottom: 0;
 		}
 	}
+	&--active {
+			background-color: #F54FFF;
+		}
 }
 
 .main {

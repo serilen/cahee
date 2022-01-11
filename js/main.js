@@ -17,10 +17,11 @@
 		$(window).resize(function () {
 			let width = $('body').innerWidth()
 			if(width < 778) {
-
-				$("#main_menu").addClass("sr-only").removeClass('main-menu--show');;
+				$("#button_burger").removeClass("burger-button--active");
+				$("#main_menu").addClass("sr-only").removeClass('main-menu--show');
 			} else {
 				$("#main_menu").removeClass("sr-only").removeClass('main-menu--show');
+				
 			}
 		})
 	});
@@ -33,7 +34,7 @@
 	buttonBurger.addEventListener('click', () => {
 		mainMenu.classList.toggle("sr-only");
 		mainMenu.classList.toggle("main-menu--show");
-		
+		buttonBurger.classList.toggle("burger-button--active");
 	});
 	
 

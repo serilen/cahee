@@ -198,6 +198,8 @@ input:focus {
       top: 0; }
     .burger-button__line:after {
       bottom: 0; }
+  .burger-button--active {
+    background-color: #F54FFF; }
 
 .main {
   -webkit-box-flex: 1;
