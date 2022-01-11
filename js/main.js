@@ -17,6 +17,7 @@
 		$(window).resize(function () {
 			let width = $('body').innerWidth()
 			if(width < 778) {
+				$("#button_burger_line").removeClass("burger-button__line--no-visibilite");
 				$("#button_burger").removeClass("burger-button--active");
 				$("#main_menu").addClass("sr-only").removeClass('main-menu--show');
 			} else {
@@ -28,12 +29,14 @@
 
 
 	const buttonBurger = document.querySelector('#button_burger');
-	const mainMenu = document.querySelector('#main_menu')
+	const mainMenu = document.querySelector('#main_menu');
+	const buttonBurgerLine = document.querySelector('#button_burger_line');
 
 
 	buttonBurger.addEventListener('click', () => {
 		mainMenu.classList.toggle("sr-only");
 		mainMenu.classList.toggle("main-menu--show");
+		buttonBurgerLine.classList.toggle("burger-button__line--no-visibilite");
 		buttonBurger.classList.toggle("burger-button--active");
 	});
 	

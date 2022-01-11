@@ -198,8 +198,18 @@ input:focus {
       top: 0; }
     .burger-button__line:after {
       bottom: 0; }
+    .burger-button__line--no-visibilite {
+      background-color: inherit; }
+      .burger-button__line--no-visibilite:after, .burger-button__line--no-visibilite:before {
+        background-color: inherit; }
   .burger-button--active {
-    background-color: #F54FFF; }
+    background-image: url(../image/x-button.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
 
 .main {
   -webkit-box-flex: 1;

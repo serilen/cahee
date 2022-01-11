@@ -247,10 +247,22 @@ input:focus {
 		&:after {
 			bottom: 0;
 		}
+
+		&--no-visibilite {
+			&:after,
+			&:before {
+				background-color: inherit;
+			}
+			background-color: inherit;
+		}
 	}
 	&--active {
-			background-color: #F54FFF;
-		}
+		background-image: url(../image/x-button.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		transition: 0.5s;
+	}
 }
 
 .main {
