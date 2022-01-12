@@ -30,6 +30,76 @@
   margin-left: -15px;
   margin-right: -15px; }
 
+@media (max-width: 320px) {
+  .row-xs-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap; } }
+
+@media (max-width: 576px) {
+  .row-sm-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap; } }
+
+@media (max-width: 768px) {
+  .row-md-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap; } }
+
+@media (max-width: 992px) {
+  .row-lg-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap; } }
+
+@media (max-width: 1200px) {
+  .row-xlg-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: row-reverse wrap;
+    flex-flow: row-reverse wrap; } }
+
+@media (max-width: 320px) {
+  .row-xs-reverse-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap; } }
+
+@media (max-width: 576px) {
+  .row-sm-reverse-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap; } }
+
+@media (max-width: 768px) {
+  .row-md-reverse-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap; } }
+
+@media (max-width: 992px) {
+  .row-lg-reverse-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap; } }
+
+@media (max-width: 1200px) {
+  .row-xlg-reverse-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap; } }
+
 [class*="col-"] {
   padding-left: 15px;
   padding-right: 15px;

@@ -16,7 +16,7 @@
 
 		$(window).resize(function () {
 			let width = $('body').innerWidth()
-			if(width < 778) {
+			if(width < 768) {
 				$("#button_burger_line").removeClass("burger-button__line--no-visibilite");
 				$("#button_burger").removeClass("burger-button--active");
 				$("#main_menu").addClass("sr-only").removeClass('main-menu--show');
