@@ -615,9 +615,14 @@ a, button, input {
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 130px 0 150px;
+	
 	@media (max-width: $screen-md-max) {
-		padding: 20px 0;
+		padding: 40px 0;
 		text-align: center;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		background-image: none;
 	}
 
 
@@ -634,7 +639,6 @@ a, button, input {
 	&__desc {
 		margin-bottom: 30px;
 		@media (max-width: $screen-md-max) {
-			font-size: 14px;
 			margin-bottom: 10px;
 		}
 	}
@@ -645,7 +649,7 @@ a, button, input {
 			margin-right: 30px;
 			width: 100%;
 			@media (max-width: $screen-md-max) {
-				margin-bottom: 30px;
+				margin-bottom: 15px;
 			}
 		}
 	}
@@ -657,11 +661,10 @@ a, button, input {
 .section-blog {
 	background-color: #b07cf7;
 	text-align: center;
-	min-height: 865px;
 	padding: 100px 0;
 	color: $color-text-light;
 	@media (max-width: $screen-md-max) {
-		padding: 20px 0;
+		padding: 40px 0 20px;
 	}
 }
 
@@ -686,6 +689,10 @@ a, button, input {
 
 	&-wrap {
 		margin-bottom: 50px;
+
+		@media (max-width: $screen-md-max) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&-card {
@@ -745,7 +752,6 @@ a, button, input {
 			padding: 20px 15px;
 			position: absolute;
 			background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(255,255,255,0));
-			min-height: 50%;
 			bottom: 0;
 			left: 0;
 			text-align: left;
@@ -809,12 +815,17 @@ a, button, input {
 
 	&__info {
 		padding-left: 70px;
+
 		@media (max-width: $screen-md-max) {
 			padding-left: 0;
 		}
 
 		&-subtitle {
 			text-transform: uppercase;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 16px;
+			}
 		}
 
 		&-text {
@@ -822,6 +833,10 @@ a, button, input {
 			text-align: left;
 			margin-bottom: 15px;
 			line-height: 1.2;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: 14px;
+			}
 		}
 
 		&-link {
