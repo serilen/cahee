@@ -35,21 +35,21 @@ $container-map: (
   margin-right: -$gutter;
 }
 
-@each $size, $breakpoint in $map-breakpoints {
-  @media (max-width: $breakpoint) {
-    .row-#{$size}-reverse {
-      flex-flow: row-reverse wrap;
-    }
-  }
-}
+// @each $size, $breakpoint in $map-breakpoints {
+//   @media (min-width: $breakpoint) {
+//     .row-#{$size}-reverse {
+//       flex-flow: row-reverse wrap;
+//     }
+//   }
+// }
 
-@each $size, $breakpoint in $map-breakpoints {
-  @media (max-width: $breakpoint) {
-    .row-#{$size}-reverse-column {
-      flex-flow: column-reverse wrap;
-    }
-  }
-}
+// @each $size, $breakpoint in $map-breakpoints {
+//   @media (min-width: $breakpoint) {
+//     .row-#{$size}-reverse-column {
+//       flex-flow: column-reverse wrap;
+//     }
+//   }
+// }
 
 [class*="col-"] {
   padding-left: $gutter;
@@ -83,6 +83,16 @@ $container-map: (
     @for $i from 11 through 0 {
     .col-#{$size}-offset-#{$i} {
         margin-left: (100% / 12) * $i;
+      }
+    }
+  }
+}
+
+@each $size, $breakpoint in $map-breakpoints {
+  @media (min-width: $breakpoint) {
+    @for $i from 11 through 0 {
+    .order-#{$size}-#{$i} {
+        order: $i;
       }
     }
   }
