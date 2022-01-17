@@ -184,7 +184,10 @@ a, button, input {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 145px;
+		min-height: 70px;
+		@media (max-width: $screen-sm-max) {
+			min-height: 90px;
+		}
 	}
 
 	&__logo {
@@ -284,7 +287,7 @@ a, button, input {
 			width: 100%;
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.9);
-			padding: 145px 30px 30px 30px;
+			padding: 70px 30px 30px 30px;
 			transition: left .3s easy 0;
 			overflow: auto;
 
@@ -295,7 +298,7 @@ a, button, input {
 				position: fixed;
 				background-color: $color-text-light;
 				width: 100%;
-				height: 145px;
+				height: 70px;
 				z-index: 2;
 				overflow: hidden;
 			}
@@ -362,12 +365,16 @@ a, button, input {
 			background-color: transparent;
 		}
 
+		&:focus {
+			color: darken($color-text-light, 30%);
+		}
+
 		&:hover::before {
 			background-color: #ff6033;
 		}
 
 		&:active{
-			background-color: #EFF2DA;
+			background-color: darken($color-text-light, 5%);
 		}
 	}
 
@@ -376,7 +383,7 @@ a, button, input {
 		position: absolute;
 		top: 100%;
 		right: 0;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: rgba(255, 255, 255, 0.9);
 		padding: 15px;
 		min-width: 200px;
 
@@ -406,12 +413,30 @@ a, button, input {
 	}
 
 	&__sub-link {
-		color: #fff;
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		color: inherit;
+		color: $color-text-dark;
 		text-transform: initial;
+		padding: 10px;
 
 		@media (max-width: $screen-sm-max) {
 			font-size: 18px;
 			color: $color-text-dark;
+		}
+
+		&:focus {
+			color: lighten($color-text-dark, 30%);
+		}
+
+		&:hover {
+			background-color: $color-text-dark;
+			color: $color-text-light;
+		}
+
+		&:active{
+			background-color: lighten($color-text-dark, 20%);
 		}
 	}
 }
@@ -497,47 +522,6 @@ body._touch {
 
 .main {
 	flex: 1 1 auto;
-}
-
-.main-menu {
-	list-style: none;
-	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: 700;
-	text-align: center;
-	padding-left: 0;
-
-	
-
-	&__link {
-		padding: 12px 18px;
-		display: block;
-		position: relative;
-		text-decoration: none;
-		color: inherit;
-
-		@media (max-width: $screen-sm-max) {
-			padding: 10px 15px;
-		}
-
-		&:before {
-			position: absolute;
-			top: 0;
-			display: block;
-			content: '';
-			width: calc(100% - 36px);
-			height: 3px;
-			background-color: transparent;
-		}
-
-		&:hover::before {
-			background-color: #ff6033;
-		}
-
-		&:active{
-			background-color: #EFF2DA;
-		}
-	}
 }
 
 .btn-scroll {
@@ -671,6 +655,7 @@ body._touch {
 		color: $color-text-dark;
 		text-transform: capitalize;
 		align-items: center;
+		border: none;
 
 		@media (max-width: $screen-sm-max) {
 			font-size: 14px;
@@ -711,6 +696,10 @@ body._touch {
 
 		&--organized::before {
 			background-image: url('../image/icon-organized.svg');
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(mix(#2a82c9, $color-text-light, 15%), .5);
 		}
 
 		&:hover {

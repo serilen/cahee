@@ -65,11 +65,11 @@ $(document).ready(function() {
 $("body").on("click","a", function (event) {
 
 //При нажатии на ссылку убираем экран меню
-	if ($('.menu__burger-button').hasClass('_active')) {
-		$('.menu__body').removeClass('_active');
-		$('.menu__burger-button').removeClass('_active');
-		$('body').removeClass('locked');
-	};
+if ($('.menu__burger-button').hasClass('_active')) {
+	$('.menu__body').removeClass('_active');
+	$('.menu__burger-button').removeClass('_active');
+	$('body').removeClass('locked');
+};
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
         //забираем идентификатор бока с атрибута href
@@ -80,7 +80,24 @@ $("body").on("click","a", function (event) {
         let heightMenu = $(".header__wrap").outerHeight();
         //анимируем переход на расстояние - (top-height) -  за 1500 мс
         $('body,html').animate({scrollTop: (top - heightMenu)}, 1500);
+        //убираем прозрачный фон у меню
+        $('header').css('background-color', '#fff');
      });
+
+
+$(window).scroll(function() {
+	let scrolled = $(window).scrollTop(),
+	scrollPrev = 0;
+
+	if ( scrolled > 70 && scrolled > scrollPrev ) {
+		$('.header').css('background-color', '#fff');
+	} else {
+		$('.header').css('background-color', 'transparent');
+	}
+	scrollPrev = scrolled;
+});
+
 })
+
 
 })();
