@@ -131,10 +131,10 @@ a, button, input {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 70px; }
+    min-height: 145px; }
     @media (max-width: 767px) {
       .header__wrap {
-        min-height: 90px; } }
+        min-height: 70px; } }
   .header__logo {
     position: relative;
     z-index: 5; }

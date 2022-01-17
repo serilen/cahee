@@ -184,9 +184,9 @@ a, button, input {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 70px;
+		min-height: 145px;
 		@media (max-width: $screen-sm-max) {
-			min-height: 90px;
+			min-height: 70px;
 		}
 	}
 
