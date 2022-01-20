@@ -276,6 +276,16 @@ a, button, input {
         padding: 10px 15px;
         color: #fff;
         font-size: 20px; } }
+    .menu-list__link:focus {
+      font-weight: 400; }
+      @media (max-width: 767px) {
+        .menu-list__link:focus {
+          background-color: #ffffff;
+          color: #262626; } }
+    @media (max-width: 767px) {
+      .menu-list__link:hover {
+        background-color: #ffffff;
+        color: #262626; } }
     .menu-list__link:before {
       position: absolute;
       top: 0;
@@ -284,15 +294,34 @@ a, button, input {
       width: 0;
       height: 3px;
       background-color: #ff6033;
-      -webkit-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out; }
-    .menu-list__link:focus {
-      color: #b3b3b3; }
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .menu-list__link:focus::before {
+      background-color: #262626;
+      width: calc(100% - 36px);
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; }
+      @media (max-width: 1199px) {
+        .menu-list__link:focus::before {
+          width: calc(100% - 24px); } }
+      @media (max-width: 767px) {
+        .menu-list__link:focus::before {
+          width: 0; } }
     .menu-list__link:hover::before {
       width: calc(100% - 36px); }
+      @media (max-width: 1199px) {
+        .menu-list__link:hover::before {
+          width: calc(100% - 24px); } }
+      @media (max-width: 767px) {
+        .menu-list__link:hover::before {
+          width: 0; } }
     .menu-list__link:active {
-      background-color: #f2f2f2; }
+      font-weight: 400; }
+      @media (max-width: 767px) {
+        .menu-list__link:active {
+          background-color: #bfbfbf; } }
   .menu-list__arrow {
     display: none;
     width: 0;
@@ -394,9 +423,6 @@ a, button, input {
     margin-bottom: 10px;
     font-size: 60px;
     font-weight: 800; }
-    @media (max-width: 767px) {
-      .home__title {
-        font-size: 30px; } }
   .home__description {
     margin-bottom: 25px; }
 

@@ -351,6 +351,21 @@ a, button, input {
 			font-size: 20px;
 		}
 
+		&:focus {
+			font-weight: 400;
+			@media (max-width: $screen-sm-max) {
+				background-color: $color-text-light;
+				color: $color-text-dark;
+			}
+		}
+
+		&:hover {
+			@media (max-width: $screen-sm-max) {
+				background-color: $color-text-light;
+				color: $color-text-dark;
+			}
+		}
+
 		&:before {
 			position: absolute;
 			top: 0;
@@ -359,20 +374,38 @@ a, button, input {
 			width: 0;
 			height: 3px;
 			background-color: #ff6033;
-			transition: all 0.5s ease-in-out;
+			transition: all 0.2s ease-in-out;
 		}
 
-		&:focus {
-			color: darken($color-text-light, 30%);
+		&:focus::before {
+			background-color: $color-text-dark;
+			width: calc(100% - 36px);
+			transition: none;
+			@media (max-width: $screen-lg-max) {
+				width: calc(100% - 24px);
+			}
+			@media (max-width: $screen-sm-max) {
+				width: 0;
+			}
 		}
 
 		&:hover::before {
 			width: calc(100% - 36px);
+			@media (max-width: $screen-lg-max) {
+				width: calc(100% - 24px);
+			}
+			@media (max-width: $screen-sm-max) {
+				width: 0;
+			}
 			
 		}
 
 		&:active{
-			background-color: darken($color-text-light, 5%);
+			font-weight: 400;
+
+			@media (max-width: $screen-sm-max) {
+				background-color: lighten($color-text-dark, 60%);
+			}
 		}
 	}
 
@@ -434,10 +467,6 @@ a, button, input {
 		}
 	}
 
-	&__sub-item {
-
-	}
-
 	&__sub-link {
 		display: block;
 		width: 100%;
@@ -493,10 +522,6 @@ a, button, input {
 		margin-bottom: 10px;
 		font-size: 60px;
 		font-weight: 800;
-
-		@media (max-width: $screen-sm-max) {
-			font-size: 30px;
-		}
 	}
 
 	&__description {
