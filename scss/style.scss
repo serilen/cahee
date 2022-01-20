@@ -1,6 +1,6 @@
-@import '_variables.scss';
+@import "_variables.scss";
 //mixins
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
 	content: $content;
 	display: $display;
 	position: $pos;
@@ -15,35 +15,46 @@
 
 //variable
 $color-text-dark: #262626;
-$color-text-light:  #ffffff;
+$color-text-light: #ffffff;
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	transition: all .1s ease-in;
+	transition: all 0.2s ease-in;
 }
 
-html, body {
-	font-family: 'Raleway', Arial, sans-serif;
+html,
+body {
+	font-family: "Raleway", Arial, sans-serif;
 	font-size: 17px;
 	font-weight: 300;
 	color: $color-text-dark;
 	line-height: 1.5;
-	height: 100%;	
+	height: 100%;
 	max-height: 100vh;
 }
 
-.hidden {
+.un-scroll {
 	overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	margin-top: 0;
 }
 
-a, button, input {
+a,
+button,
+input {
 	outline: none;
 }
 
@@ -53,15 +64,12 @@ a, button, input {
 	display: block;
 }
 
-
 .title {
 	font-size: 89px;
 	line-height: 1.1;
 }
 
-
 .form {
-
 	&__field {
 		padding: 17px;
 		font-size: 15px;
@@ -79,14 +87,13 @@ a, button, input {
 	padding: 14px 20px;
 	border: 1px solid transparent;
 	position: relative;
-	-webkit-tap-highlight-color:  transparent;
-
+	-webkit-tap-highlight-color: transparent;
 
 	&--orange {
 		background-color: #ff6033;
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #ff6033, 15%), .5);
+			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #ff6033, 15%), 0.5);
 		}
 
 		&:hover {
@@ -96,7 +103,7 @@ a, button, input {
 		}
 
 		&:active {
-			background-color: darken($color-text-light ,10%);
+			background-color: darken($color-text-light, 10%);
 		}
 	}
 
@@ -104,7 +111,7 @@ a, button, input {
 		background-color: #5585a2;
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #5585a2, 15%), .5);
+			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #5585a2, 15%), 0.5);
 		}
 
 		&:hover {
@@ -122,7 +129,7 @@ a, button, input {
 		background-color: #96b92c;
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #96b92c, 15%), .5);
+			box-shadow: 0 0 0 3px rgba(mix($color-text-light, #96b92c, 15%), 0.5);
 		}
 
 		&:hover {
@@ -132,7 +139,7 @@ a, button, input {
 		}
 
 		&:active {
-			background-color: darken($color-text-light ,10%);
+			background-color: darken($color-text-light, 10%);
 		}
 	}
 
@@ -140,7 +147,7 @@ a, button, input {
 		background-color: #f72b3b;
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(mix(#f72b3b, $color-text-light, 15%), .5);
+			box-shadow: 0 0 0 3px rgba(mix(#f72b3b, $color-text-light, 15%), 0.5);
 		}
 
 		&:hover {
@@ -150,7 +157,7 @@ a, button, input {
 		}
 
 		&:active {
-			background-color: darken($color-text-light ,10%);
+			background-color: darken($color-text-light, 10%);
 		}
 	}
 }
@@ -165,7 +172,7 @@ a, button, input {
 	font-size: 1px;
 	line-height: 1px;
 	overflow: hidden;
-	clip: rect(0,0,0,0);
+	clip: rect(0, 0, 0, 0);
 	border: 0;
 	outline: 0;
 }
@@ -177,6 +184,10 @@ a, button, input {
 	width: 100%;
 	z-index: 20;
 	background-color: inherit;
+
+	&--bg-active {
+		background-color: $color-text-light;
+	}
 
 	&__wrap {
 		display: flex;
@@ -204,16 +215,12 @@ a, button, input {
 	&:hover {
 		opacity: 0.8;
 	}
-	
-	&__menu {}
 }
-
 
 .burger-button {
 	outline: none;
 	border-color: transparent;
 	background-color: transparent;
-	//display: none;
 
 	@media (max-width: $screen-sm-max) {
 		display: block;
@@ -222,7 +229,7 @@ a, button, input {
 		width: 42px;
 		height: 35px;
 
-		span,
+		&__line,
 		&:before,
 		&:after {
 			position: absolute;
@@ -230,12 +237,16 @@ a, button, input {
 			width: 100%;
 			height: 10%;
 			background-color: $color-text-dark;
-			transition: all .3s ease-in;
+			transition: all 0.3s ease-in;
 		}
 
-		span {
+		&__line {
 			top: 50%;
 			transform: scale(1) translate(0, -50%);
+
+			&--active {
+				transform: scale(0);
+			}
 		}
 
 		&:before,
@@ -252,14 +263,10 @@ a, button, input {
 		}
 
 		&--active {
-			& span {
-				transform: scale(0);
-			}
-
 			&:before {
 				top: 50%;
 				transform: rotate(-45deg) translate(0, -50%);
-			} 
+			}
 
 			&:after {
 				bottom: 50%;
@@ -277,7 +284,7 @@ a, button, input {
 		width: 100%;
 		height: 100%;
 		padding: 70px 30px 30px 30px;
-		transition: all .3s ease-in;
+		transition: all 0.3s ease-in;
 		overflow: auto;
 		background-color: rgba(0, 0, 0, 0.9);
 
@@ -324,7 +331,6 @@ a, button, input {
 
 		@media (max-width: $screen-sm-max) {
 			padding: 10px 0;
-			margin-bottom: 20px;
 			flex-wrap: wrap;
 			display: flex;
 			align-items: center;
@@ -351,28 +357,60 @@ a, button, input {
 			font-size: 20px;
 		}
 
+		&:focus {
+			color: #a4a0a0;
+			@media (max-width: $screen-sm-max) {
+				background-color: $color-text-light;
+				color: $color-text-dark;
+			}
+		}
+
+		&:hover {
+			@media (max-width: $screen-sm-max) {
+				background-color: $color-text-light;
+				color: $color-text-dark;
+			}
+		}
+
 		&:before {
 			position: absolute;
 			top: 0;
 			display: block;
-			content: '';
+			content: "";
 			width: 0;
 			height: 3px;
 			background-color: #ff6033;
-			transition: all 0.5s ease-in-out;
+			transition: all 0.2s ease-in-out;
 		}
 
-		&:focus {
-			color: darken($color-text-light, 30%);
+		&:focus::before {
+			background-color: #a4a0a0;
+			width: calc(100% - 36px);
+			transition: none;
+			@media (max-width: $screen-lg-max) {
+				width: calc(100% - 24px);
+			}
+			@media (max-width: $screen-sm-max) {
+				width: 0;
+			}
 		}
 
 		&:hover::before {
 			width: calc(100% - 36px);
-			
+			@media (max-width: $screen-lg-max) {
+				width: calc(100% - 24px);
+			}
+			@media (max-width: $screen-sm-max) {
+				width: 0;
+			}
 		}
 
-		&:active{
-			background-color: darken($color-text-light, 5%);
+		&:active {
+			color: #a4a0a0;
+
+			@media (max-width: $screen-sm-max) {
+				background-color: lighten($color-text-dark, 60%);
+			}
 		}
 	}
 
@@ -383,7 +421,7 @@ a, button, input {
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
 		border-top: 10px solid #000;
-		transition: transform .3s ease-in;
+		transition: transform 0.3s ease-in;
 		@media (max-width: $screen-sm-max) {
 			display: block;
 			border-top-color: $color-text-light;
@@ -404,7 +442,7 @@ a, button, input {
 			transform: translate(0, 10%);
 			visibility: hidden;
 			pointer-events: none;
-			transition: all .3s ease-in;
+			transition: all 0.3s ease-in;
 		}
 
 		@media (max-width: $screen-sm-max) {
@@ -434,10 +472,6 @@ a, button, input {
 		}
 	}
 
-	&__sub-item {
-
-	}
-
 	&__sub-link {
 		display: block;
 		width: 100%;
@@ -461,7 +495,7 @@ a, button, input {
 			color: $color-text-light;
 		}
 
-		&:active{
+		&:active {
 			background-color: lighten($color-text-dark, 20%);
 		}
 	}
@@ -493,10 +527,6 @@ a, button, input {
 		margin-bottom: 10px;
 		font-size: 60px;
 		font-weight: 800;
-
-		@media (max-width: $screen-sm-max) {
-			font-size: 30px;
-		}
 	}
 
 	&__description {
@@ -527,7 +557,7 @@ a, button, input {
 	}
 
 	&:focus {
-		box-shadow: 0 0 0 3px rgba(#262626, .5);
+		box-shadow: 0 0 0 3px rgba(#262626, 0.5);
 	}
 
 	&:hover {
@@ -552,7 +582,7 @@ a, button, input {
 	color: $color-text-light;
 
 	&__img {
-		filter: drop-shadow(-20px 7px 50px rgba(0,0,0,0.3));
+		filter: drop-shadow(-20px 7px 50px rgba(0, 0, 0, 0.3));
 		@media (max-width: $screen-xs-max) {
 			width: 60%;
 			@include push--auto;
@@ -574,7 +604,6 @@ a, button, input {
 		}
 
 		@media (max-width: $screen-sm-max) {
-
 		}
 		@media (max-width: $screen-xs-max) {
 			padding-top: 20px;
@@ -609,7 +638,7 @@ a, button, input {
 .section-service {
 	background-color: #70bfff;
 	padding: 100px 0 150px;
-	
+
 	@media (max-width: $screen-md-max) {
 		padding: 70px 0;
 		text-align: center;
@@ -623,14 +652,12 @@ a, button, input {
 		width: 100%;
 	}
 
-
 	&__controls {
 		padding-top: 75px;
 
 		@media (max-width: $screen-md-max) {
 			padding-top: 0;
 		}
-
 	}
 
 	&__btn {
@@ -672,23 +699,23 @@ a, button, input {
 		}
 
 		&--shopping::before {
-			background-image: url('../image/icon-shopping.svg');
+			background-image: url("../image/icon-shopping.svg");
 		}
 
 		&--product::before {
-			background-image: url('../image/icon-product.svg');
+			background-image: url("../image/icon-product.svg");
 		}
 
 		&--delivery::before {
-			background-image: url('../image/icon-delivery.svg');
+			background-image: url("../image/icon-delivery.svg");
 		}
 
 		&--organized::before {
-			background-image: url('../image/icon-organized.svg');
+			background-image: url("../image/icon-organized.svg");
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(mix(#2a82c9, $color-text-light, 15%), .5);
+			box-shadow: 0 0 0 3px rgba(mix(#2a82c9, $color-text-light, 15%), 0.5);
 		}
 
 		&:hover {
@@ -753,8 +780,8 @@ a, button, input {
 		@media (max-width: $screen-xs-max) {
 			font-size: 40px;
 			margin-bottom: 20px;
-		}	
-	} 
+		}
+	}
 }
 
 .section-gallery {
@@ -799,7 +826,7 @@ a, button, input {
 }
 
 .section-subscribe-us {
-	background-image: url('../image/bg.png');
+	background-image: url("../image/bg.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 130px 0 150px;
@@ -812,7 +839,6 @@ a, button, input {
 	@media (max-width: $screen-xs-max) {
 		background-image: none;
 	}
-
 
 	&__title {
 		font-size: 40px;
@@ -829,7 +855,6 @@ a, button, input {
 	}
 
 	&__form {
-
 		&-field {
 			margin-right: 30px;
 			width: 100%;
@@ -934,7 +959,7 @@ a, button, input {
 		&__info {
 			padding: 20px 15px;
 			position: absolute;
-			background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(255,255,255,0));
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0));
 			bottom: 0;
 			left: 0;
 			text-align: left;
@@ -967,17 +992,18 @@ a, button, input {
 
 .section-contact {
 	flex: 0 1 auto;
-	background-image: url('../image/bg-contact.png');
+	background-image: url("../image/bg-contact.png");
 	background-position: center center;
 	background-size: cover;
 	padding: 90px 0 120px;
 	@media (max-width: $screen-md-max) {
 		padding: 30px 0;
+		background-image: none;
+		background-color: #ffbef4;
 	}
 }
 
 .contact {
-
 	&__title {
 		margin-bottom: 10px;
 		text-align: center;
@@ -1035,7 +1061,6 @@ a, button, input {
 	}
 }
 
-
 .form-feedback {
 	max-width: 500px;
 	color: $color-text-light;
@@ -1043,14 +1068,12 @@ a, button, input {
 		margin-bottom: 30px;
 	}
 
-
 	&__field {
 		background-color: rgba(0, 196, 196, 0.5);
 		margin-bottom: 15px;
 		border: none;
 		border-left: 5px solid transparent;
 		width: 100%;
-
 
 		&:last-child {
 			margin-bottom: 15px;
@@ -1080,7 +1103,7 @@ a, button, input {
 
 .footer {
 	background-color: $color-text-dark;
-	color: #b9b9b9;	
+	color: #b9b9b9;
 	padding: 30px 0;
 
 	&__item {
@@ -1089,7 +1112,6 @@ a, button, input {
 			margin-bottom: 10px;
 		}
 	}
-
 
 	&__copyright {
 		font-size: 16px;
