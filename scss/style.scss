@@ -358,7 +358,11 @@ input {
 		}
 
 		&:focus {
+<<<<<<< HEAD
 			color: #a4a0a0;
+=======
+			font-weight: 400;
+>>>>>>> 65436aa311a66e7482f052fa56cd689ac73be7d6
 			@media (max-width: $screen-sm-max) {
 				background-color: $color-text-light;
 				color: $color-text-dark;
@@ -384,7 +388,11 @@ input {
 		}
 
 		&:focus::before {
+<<<<<<< HEAD
 			background-color: #a4a0a0;
+=======
+			background-color: $color-text-dark;
+>>>>>>> 65436aa311a66e7482f052fa56cd689ac73be7d6
 			width: calc(100% - 36px);
 			transition: none;
 			@media (max-width: $screen-lg-max) {
@@ -403,10 +411,18 @@ input {
 			@media (max-width: $screen-sm-max) {
 				width: 0;
 			}
+<<<<<<< HEAD
 		}
 
 		&:active {
 			color: #a4a0a0;
+=======
+			
+		}
+
+		&:active{
+			font-weight: 400;
+>>>>>>> 65436aa311a66e7482f052fa56cd689ac73be7d6
 
 			@media (max-width: $screen-sm-max) {
 				background-color: lighten($color-text-dark, 60%);
