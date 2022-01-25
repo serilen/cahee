@@ -336,11 +336,9 @@ input {
           background-color: #bfbfbf; } }
   .menu-list__arrow {
     display: none;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 10px solid #000;
+    width: 50px;
+    height: 50px;
+    background-color: #1f1d1d;
     -webkit-transition: -webkit-transform 0.3s ease-in;
     transition: -webkit-transform 0.3s ease-in;
     -o-transition: transform 0.3s ease-in;
@@ -349,7 +347,18 @@ input {
     @media (max-width: 767px) {
       .menu-list__arrow {
         display: block;
-        border-top-color: #ffffff; } }
+        position: relative; }
+        .menu-list__arrow:before {
+          position: absolute;
+          content: "\25BC";
+          color: #ffffff;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+        .menu-list__arrow:hover {
+          cursor: pointer; } }
   .menu-list__sub-list {
     list-style: none;
     position: absolute;

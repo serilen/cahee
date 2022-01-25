@@ -33,6 +33,11 @@
 			$('body,html').animate({ scrollTop: (top - heightMenu) }, 1500);
 		});
 
+
+		//Проверка на положение хеадера, если проскролиный, то ему активный класс
+		if ($('.header').offset().top > 0) {
+			$('.header').addClass('header--bg-active');
+		}
 		//Если скролим вниз меню делаем непрозрачным
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > 0 && $(window).width() >= 768) {
